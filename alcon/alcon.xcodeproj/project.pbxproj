@@ -21,6 +21,7 @@
 		44C24F19260D6743005BB6A1 /* CalendarAndDrinkingRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C24F18260D6743005BB6A1 /* CalendarAndDrinkingRecordViewController.swift */; };
 		44C24F1E260D676B005BB6A1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C24F1D260D676B005BB6A1 /* SettingsViewController.swift */; };
 		44C24F23260D68B9005BB6A1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C24F22260D68B9005BB6A1 /* MainTabBarController.swift */; };
+		44D3A38B260DA81100F14E38 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D3A38A260DA81100F14E38 /* UIColor-Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		44C24F18260D6743005BB6A1 /* CalendarAndDrinkingRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAndDrinkingRecordViewController.swift; sourceTree = "<group>"; };
 		44C24F1D260D676B005BB6A1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		44C24F22260D68B9005BB6A1 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		44D3A38A260DA81100F14E38 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				441F3841260BA8BC00BF0D79 /* AppDelegate.swift */,
 				441F3843260BA8BC00BF0D79 /* SceneDelegate.swift */,
 				441F3845260BA8BC00BF0D79 /* ViewController.swift */,
+				44D3A389260DA79500F14E38 /* Extension */,
 				44ADA207260CF36A00847822 /* Views */,
 				442C46D9260D8AD600A2A8EF /* ViewControllers */,
 				441F384A260BA8C100BF0D79 /* Assets.xcassets */,
@@ -160,6 +163,14 @@
 				44ADA220260CF61000847822 /* DrinkTableView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		44D3A389260DA79500F14E38 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				44D3A38A260DA81100F14E38 /* UIColor-Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +312,7 @@
 				44ADA20A260CF51200847822 /* GoalView.swift in Sources */,
 				44ADA21C260CF5F000847822 /* DrinkTableItemView.swift in Sources */,
 				44C24F1E260D676B005BB6A1 /* SettingsViewController.swift in Sources */,
+				44D3A38B260DA81100F14E38 /* UIColor-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
