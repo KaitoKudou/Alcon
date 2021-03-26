@@ -9,11 +9,18 @@
 /* Begin PBXBuildFile section */
 		441F3842260BA8BC00BF0D79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F3841260BA8BC00BF0D79 /* AppDelegate.swift */; };
 		441F3844260BA8BC00BF0D79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F3843260BA8BC00BF0D79 /* SceneDelegate.swift */; };
-		441F3846260BA8BC00BF0D79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F3845260BA8BC00BF0D79 /* ViewController.swift */; };
 		441F384B260BA8C100BF0D79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 441F384A260BA8C100BF0D79 /* Assets.xcassets */; };
 		441F384E260BA8C100BF0D79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441F384C260BA8C100BF0D79 /* LaunchScreen.storyboard */; };
 		441F3859260BA8C100BF0D79 /* alconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F3858260BA8C100BF0D79 /* alconTests.swift */; };
 		441F3864260BA8C100BF0D79 /* alconUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F3863260BA8C100BF0D79 /* alconUITests.swift */; };
+		44ADA20A260CF51200847822 /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ADA209260CF51100847822 /* GoalView.swift */; };
+		44ADA20F260CF53400847822 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ADA20E260CF53400847822 /* CalendarView.swift */; };
+		44ADA21C260CF5F000847822 /* DrinkTableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ADA21B260CF5F000847822 /* DrinkTableItemView.swift */; };
+		44ADA221260CF61000847822 /* DrinkTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ADA220260CF61000847822 /* DrinkTableView.swift */; };
+		44C24F19260D6743005BB6A1 /* CalendarAndDrinkingRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C24F18260D6743005BB6A1 /* CalendarAndDrinkingRecordViewController.swift */; };
+		44C24F1E260D676B005BB6A1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C24F1D260D676B005BB6A1 /* SettingsViewController.swift */; };
+		44C24F23260D68B9005BB6A1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C24F22260D68B9005BB6A1 /* MainTabBarController.swift */; };
+		44D3A38B260DA81100F14E38 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D3A38A260DA81100F14E38 /* UIColor-Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +44,6 @@
 		441F383E260BA8BC00BF0D79 /* alcon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alcon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		441F3841260BA8BC00BF0D79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		441F3843260BA8BC00BF0D79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		441F3845260BA8BC00BF0D79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		441F384A260BA8C100BF0D79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		441F384D260BA8C100BF0D79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		441F384F260BA8C100BF0D79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +53,14 @@
 		441F385F260BA8C100BF0D79 /* alconUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = alconUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		441F3863260BA8C100BF0D79 /* alconUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alconUITests.swift; sourceTree = "<group>"; };
 		441F3865260BA8C100BF0D79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44ADA209260CF51100847822 /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
+		44ADA20E260CF53400847822 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		44ADA21B260CF5F000847822 /* DrinkTableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTableItemView.swift; sourceTree = "<group>"; };
+		44ADA220260CF61000847822 /* DrinkTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTableView.swift; sourceTree = "<group>"; };
+		44C24F18260D6743005BB6A1 /* CalendarAndDrinkingRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAndDrinkingRecordViewController.swift; sourceTree = "<group>"; };
+		44C24F1D260D676B005BB6A1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		44C24F22260D68B9005BB6A1 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		44D3A38A260DA81100F14E38 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +113,9 @@
 			children = (
 				441F3841260BA8BC00BF0D79 /* AppDelegate.swift */,
 				441F3843260BA8BC00BF0D79 /* SceneDelegate.swift */,
-				441F3845260BA8BC00BF0D79 /* ViewController.swift */,
+				44D3A389260DA79500F14E38 /* Extension */,
+				44ADA207260CF36A00847822 /* Views */,
+				442C46D9260D8AD600A2A8EF /* ViewControllers */,
 				441F384A260BA8C100BF0D79 /* Assets.xcassets */,
 				441F384C260BA8C100BF0D79 /* LaunchScreen.storyboard */,
 				441F384F260BA8C100BF0D79 /* Info.plist */,
@@ -123,6 +139,35 @@
 				441F3865260BA8C100BF0D79 /* Info.plist */,
 			);
 			path = alconUITests;
+			sourceTree = "<group>";
+		};
+		442C46D9260D8AD600A2A8EF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				44C24F18260D6743005BB6A1 /* CalendarAndDrinkingRecordViewController.swift */,
+				44C24F1D260D676B005BB6A1 /* SettingsViewController.swift */,
+				44C24F22260D68B9005BB6A1 /* MainTabBarController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		44ADA207260CF36A00847822 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44ADA209260CF51100847822 /* GoalView.swift */,
+				44ADA20E260CF53400847822 /* CalendarView.swift */,
+				44ADA21B260CF5F000847822 /* DrinkTableItemView.swift */,
+				44ADA220260CF61000847822 /* DrinkTableView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		44D3A389260DA79500F14E38 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				44D3A38A260DA81100F14E38 /* UIColor-Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +299,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				441F3846260BA8BC00BF0D79 /* ViewController.swift in Sources */,
+				44ADA20F260CF53400847822 /* CalendarView.swift in Sources */,
+				44C24F19260D6743005BB6A1 /* CalendarAndDrinkingRecordViewController.swift in Sources */,
+				44C24F23260D68B9005BB6A1 /* MainTabBarController.swift in Sources */,
 				441F3842260BA8BC00BF0D79 /* AppDelegate.swift in Sources */,
+				44ADA221260CF61000847822 /* DrinkTableView.swift in Sources */,
 				441F3844260BA8BC00BF0D79 /* SceneDelegate.swift in Sources */,
+				44ADA20A260CF51200847822 /* GoalView.swift in Sources */,
+				44ADA21C260CF5F000847822 /* DrinkTableItemView.swift in Sources */,
+				44C24F1E260D676B005BB6A1 /* SettingsViewController.swift in Sources */,
+				44D3A38B260DA81100F14E38 /* UIColor-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
