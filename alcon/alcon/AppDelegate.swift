@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor(hex: "73AADD")
         UINavigationBar.appearance().barTintColor = UIColor(hex: "C3E2FF")
         UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(hex: "73AADD")]
-        
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(hex: "73AADD"),
+             NSAttributedString.Key.font : UIFont(name: "AlNile-Bold", size: 20)!]
         //タブバーコントローラー
         UITabBar.appearance().tintColor = UIColor(hex: "73AADD")
         UITabBar.appearance().unselectedItemTintColor = UIColor.gray
