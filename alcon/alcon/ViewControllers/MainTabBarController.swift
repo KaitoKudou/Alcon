@@ -18,9 +18,14 @@ class MainTabBarController: UITabBarController {
 private extension MainTabBarController {
     func setupTab() {
         let calendarAndDrinkingRecordViewController = CalendarAndDrinkingRecordViewController()
-        calendarAndDrinkingRecordViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 0)
+        let calendarSelectedImage = UIImage(named: "calendar_selected")?.resize(size: .init(width: 30, height: 30))
+        let calendarUnselectedImage = UIImage(named: "calendar_unselected")?.resize(size: .init(width: 30, height: 30))
+        calendarAndDrinkingRecordViewController.tabBarItem = UITabBarItem(title: "calender", image: calendarUnselectedImage?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), selectedImage: calendarSelectedImage?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal))
+        
         let settingsViewController = SettingsViewController()
-        settingsViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 1)
+        let settingsSelectedImage = UIImage(named: "settings_selected")?.resize(size: .init(width: 30, height: 30))
+        let settingsUnselectedImage = UIImage(named: "settings_unselected")?.resize(size: .init(width: 30, height: 30))
+        settingsViewController.tabBarItem = UITabBarItem(title: "settings", image: settingsUnselectedImage?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), selectedImage: settingsSelectedImage?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal))
         
         let vcs = [calendarAndDrinkingRecordViewController, settingsViewController]
         let viewControllers = vcs.map{ UINavigationController(rootViewController: $0) }
