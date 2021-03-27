@@ -12,7 +12,7 @@ class CalendarAndDrinkingRecordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .blue
-        title = "カレンダー"
+        navigationItem.title = "カレンダー"
         print("CalendarAndDrinkingRecordViewController")
         
         let goalView = GoalView()

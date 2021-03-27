@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
              NSAttributedString.Key.font : UIFont(name: "AppleSDGothicNeo-Bold", size: 25)!]
         //タブバーコントローラー
         UITabBar.appearance().tintColor = UIColor(hex: "73AADD")
-        UITabBar.appearance().unselectedItemTintColor = UIColor.gray
         UITabBar.appearance().barTintColor = .white
         UITabBar.appearance().isTranslucent = false
         return true
