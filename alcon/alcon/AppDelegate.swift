@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
              NSAttributedString.Key.font : UIFont(name: "AlNile-Bold", size: 20)!]
         //タブバーコントローラー
         UITabBar.appearance().tintColor = UIColor(hex: "73AADD")
-        UITabBar.appearance().unselectedItemTintColor = UIColor.gray
         UITabBar.appearance().barTintColor = .white
         UITabBar.appearance().isTranslucent = false
         return true
