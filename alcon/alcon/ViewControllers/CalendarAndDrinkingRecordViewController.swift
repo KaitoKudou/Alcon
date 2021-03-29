@@ -16,17 +16,13 @@ class CalendarAndDrinkingRecordViewController: UIViewController {
         print("CalendarAndDrinkingRecordViewController")
         
         let goalView = GoalView()
-        
         let calendarView = CalendarView()
-        //calendarView.backgroundColor = .purple
-        
-        let view3 = UIView()
-        view3.backgroundColor = .green
+        let drinkItemView = DrinkItemView()
         
         let view4 = UIView()
         view4.backgroundColor = .red
         
-        let stackView = UIStackView(arrangedSubviews: [goalView, calendarView, view3, view4])
+        let stackView = UIStackView(arrangedSubviews: [goalView, calendarView, drinkItemView, view4])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         
@@ -35,7 +31,7 @@ class CalendarAndDrinkingRecordViewController: UIViewController {
         [
             goalView.heightAnchor.constraint(equalToConstant: 100),
             calendarView.heightAnchor.constraint(equalToConstant: 300),
-            view3.heightAnchor.constraint(equalToConstant: 50),
+            drinkItemView.heightAnchor.constraint(equalToConstant: 50),
 
             stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
