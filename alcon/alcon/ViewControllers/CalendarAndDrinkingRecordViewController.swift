@@ -13,7 +13,6 @@ class CalendarAndDrinkingRecordViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .blue
         navigationItem.title = "カレンダー"
-        print("CalendarAndDrinkingRecordViewController")
         
         let goalView = GoalView()
         let calendarView = CalendarView()

@@ -13,6 +13,5 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .yellow
         navigationItem.title = "設定"
-        print("SettingsViewController")
     }
 }
