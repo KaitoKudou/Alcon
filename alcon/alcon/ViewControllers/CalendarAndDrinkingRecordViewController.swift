@@ -29,9 +29,9 @@ class CalendarAndDrinkingRecordViewController: UIViewController {
         self.view.addSubview(stackView)
 
         [
-            goalView.heightAnchor.constraint(equalToConstant: 100),
-            calendarView.heightAnchor.constraint(equalToConstant: 300),
-            drinkItemView.heightAnchor.constraint(equalToConstant: 50),
+            goalView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1, constant: 40),
+            calendarView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.4, constant: 30),
+            drinkItemView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1, constant: -20),
 
             stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
