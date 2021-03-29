@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		44ADA20F260CF53400847822 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ADA20E260CF53400847822 /* CalendarView.swift */; };
 		44ADA21C260CF5F000847822 /* DrinkTableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ADA21B260CF5F000847822 /* DrinkTableItemView.swift */; };
 		44ADA221260CF61000847822 /* DrinkTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ADA220260CF61000847822 /* DrinkTableView.swift */; };
+		44B9B422260F7A6800DB3FE6 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 44B9B421260F7A6800DB3FE6 /* FSCalendar */; };
 		44C24F19260D6743005BB6A1 /* CalendarAndDrinkingRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C24F18260D6743005BB6A1 /* CalendarAndDrinkingRecordViewController.swift */; };
 		44C24F1E260D676B005BB6A1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C24F1D260D676B005BB6A1 /* SettingsViewController.swift */; };
 		44C24F23260D68B9005BB6A1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C24F22260D68B9005BB6A1 /* MainTabBarController.swift */; };
@@ -70,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44B9B422260F7A6800DB3FE6 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +191,9 @@
 			dependencies = (
 			);
 			name = alcon;
+			packageProductDependencies = (
+				44B9B421260F7A6800DB3FE6 /* FSCalendar */,
+			);
 			productName = alcon;
 			productReference = 441F383E260BA8BC00BF0D79 /* alcon.app */;
 			productType = "com.apple.product-type.application";
@@ -260,6 +265,9 @@
 				Base,
 			);
 			mainGroup = 441F3835260BA8BC00BF0D79;
+			packageReferences = (
+				44B9B420260F7A6800DB3FE6 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+			);
 			productRefGroup = 441F383F260BA8BC00BF0D79 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -637,6 +645,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		44B9B420260F7A6800DB3FE6 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		44B9B421260F7A6800DB3FE6 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44B9B420260F7A6800DB3FE6 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 441F3836260BA8BC00BF0D79 /* Project object */;
 }
