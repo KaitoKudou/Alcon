@@ -34,11 +34,24 @@ class CalendarView: UIView {
         calendar.backgroundColor = UIColor(hex: "C3E2FF")
         addSubview(calendar)
         self.calendar = calendar
+        calendar.delegate = self
+        calendar.dataSource = self
         
         calendar.translatesAutoresizingMaskIntoConstraints = false
         calendar.topAnchor.constraint(equalTo: topAnchor).isActive = true
         calendar.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         calendar.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         calendar.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+    }
+}
+
+extension CalendarView: FSCalendarDelegate, FSCalendarDataSource {
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        let tmpDate = Calendar(identifier: .gregorian)
+        let year = tmpDate.component(.year, from: date)
+        let month = tmpDate.component(.month, from: date)
+        let day = tmpDate.component(.day, from: date)
+
+        print("\(year)/\(month)/\(day)")
     }
 }
