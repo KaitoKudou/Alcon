@@ -31,14 +31,14 @@ class DrinkItemView: UIView {
         capacityLabel.text = "容量"
         capacityLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 18)
         capacityLabel.adjustsFontSizeToFitWidth = true
-        capacityLabel.textAlignment = .left
+        capacityLabel.textAlignment = .center
         capacityLabel.textColor = UIColor.white
         
         let pureAlcoholLabel = UILabel()
         pureAlcoholLabel.text = "純アルコール量"
         pureAlcoholLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 18)
         pureAlcoholLabel.adjustsFontSizeToFitWidth = true
-        pureAlcoholLabel.textAlignment = .left
+        pureAlcoholLabel.textAlignment = .right
         pureAlcoholLabel.textColor = UIColor.white
         
         let itemStackView = UIStackView(arrangedSubviews: [itemLabel, capacityLabel, pureAlcoholLabel])
