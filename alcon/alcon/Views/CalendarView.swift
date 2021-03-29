@@ -8,8 +8,9 @@
 import Foundation
 import FSCalendar
 
-class CalendarView: UIView, FSCalendarDataSource, FSCalendarDelegate {
+class CalendarView: UIView {
     fileprivate weak var calendar: FSCalendar!
+    let dayOfTheWeeks = ["日":0, "月":1, "火":2, "水":3, "木":4, "金":5, "土":6]
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,8 +23,14 @@ class CalendarView: UIView, FSCalendarDataSource, FSCalendarDelegate {
     
     func setupCalendar() {
         let calendar = FSCalendar(frame: CGRect(x: 0, y: 0, width: frame.width, height: 300))
-        calendar.dataSource = self
-        calendar.delegate = self
+        calendar.appearance.headerDateFormat = "yyyy年MM月"
+        calendar.appearance.headerTitleColor = UIColor(hex: "3C58A1")
+        calendar.appearance.weekdayTextColor = UIColor(hex: "3C58A1")
+        calendar.appearance.selectionColor = UIColor(hex: "73AADD")
+        
+        for (key, value) in dayOfTheWeeks {
+            calendar.calendarWeekdayView.weekdayLabels[value].text = key
+        }
         calendar.backgroundColor = UIColor(hex: "C3E2FF")
         addSubview(calendar)
         self.calendar = calendar
