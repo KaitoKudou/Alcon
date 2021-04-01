@@ -9,11 +9,16 @@ import UIKit
 
 class CalendarAndDrinkingRecordViewController: UIViewController {
 
+    var addDrinkButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .blue
         navigationItem.title = "カレンダー"
-        
+
+        print("CalendarAndDrinkingRecordViewController")
+        addDrinkButton = UIBarButtonItem(image: UIImage(named: "add_drink")?.resize(size: .init(width: 40, height: 40)), style: .plain, target: self, action: #selector(toDrinkList))
+        navigationItem.rightBarButtonItem = addDrinkButton
+
         let goalView = GoalView()
         let calendarView = CalendarView()
         let drinkItemView = DrinkItemView()
@@ -36,5 +41,9 @@ class CalendarAndDrinkingRecordViewController: UIViewController {
             stackView.rightAnchor.constraint(equalTo: view.rightAnchor)].forEach({
                 $0.isActive = true
             })
+    }
+    
+    @objc func toDrinkList() {
+        print(#function)
     }
 }
