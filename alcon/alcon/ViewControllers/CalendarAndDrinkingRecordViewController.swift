@@ -14,17 +14,17 @@ class CalendarAndDrinkingRecordViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .blue
         navigationItem.title = "カレンダー"
+
         print("CalendarAndDrinkingRecordViewController")
         addDrinkButton = UIBarButtonItem(image: UIImage(named: "add_drink")?.resize(size: .init(width: 40, height: 40)), style: .plain, target: self, action: #selector(toDrinkList))
         navigationItem.rightBarButtonItem = addDrinkButton
+
         let goalView = GoalView()
         let calendarView = CalendarView()
         let drinkItemView = DrinkItemView()
+        let drinkTableView = DrinkTableView()
         
-        let view4 = UIView()
-        view4.backgroundColor = .red
-        
-        let stackView = UIStackView(arrangedSubviews: [goalView, calendarView, drinkItemView, view4])
+        let stackView = UIStackView(arrangedSubviews: [goalView, calendarView, drinkItemView, drinkTableView])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         
