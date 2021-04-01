@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440E156F26163665008ECB22 /* DrinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440E156E26163665008ECB22 /* DrinkTableViewCell.swift */; };
 		441F3842260BA8BC00BF0D79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F3841260BA8BC00BF0D79 /* AppDelegate.swift */; };
 		441F3844260BA8BC00BF0D79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F3843260BA8BC00BF0D79 /* SceneDelegate.swift */; };
 		441F384B260BA8C100BF0D79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 441F384A260BA8C100BF0D79 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		440E156E26163665008ECB22 /* DrinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTableViewCell.swift; sourceTree = "<group>"; };
 		441F383E260BA8BC00BF0D79 /* alcon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alcon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		441F3841260BA8BC00BF0D79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		441F3843260BA8BC00BF0D79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				44ADA20E260CF53400847822 /* CalendarView.swift */,
 				44ADA21B260CF5F000847822 /* DrinkTableItemView.swift */,
 				44ADA220260CF61000847822 /* DrinkTableView.swift */,
+				440E156E26163665008ECB22 /* DrinkTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				44ADA20A260CF51200847822 /* GoalView.swift in Sources */,
 				44ADA21C260CF5F000847822 /* DrinkTableItemView.swift in Sources */,
 				44C24F1E260D676B005BB6A1 /* SettingsViewController.swift in Sources */,
+				440E156F26163665008ECB22 /* DrinkTableViewCell.swift in Sources */,
 				44D3A38B260DA81100F14E38 /* UIColor-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

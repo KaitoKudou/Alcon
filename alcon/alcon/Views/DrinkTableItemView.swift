@@ -22,21 +22,21 @@ class DrinkItemView: UIView {
     func setupLabels() {
         let itemLabel = UILabel()
         itemLabel.text = "内容"
-        itemLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 18)
+        itemLabel.font = UIFont.systemFont(ofSize: 18)
         itemLabel.adjustsFontSizeToFitWidth = true
         itemLabel.textAlignment = .left
         itemLabel.textColor = UIColor.white
         
         let capacityLabel = UILabel()
         capacityLabel.text = "容量"
-        capacityLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 18)
+        capacityLabel.font = UIFont.systemFont(ofSize: 18)
         capacityLabel.adjustsFontSizeToFitWidth = true
         capacityLabel.textAlignment = .center
         capacityLabel.textColor = UIColor.white
         
         let pureAlcoholLabel = UILabel()
         pureAlcoholLabel.text = "純アルコール量"
-        pureAlcoholLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 18)
+        pureAlcoholLabel.font = UIFont.systemFont(ofSize: 18)
         pureAlcoholLabel.adjustsFontSizeToFitWidth = true
         pureAlcoholLabel.textAlignment = .right
         pureAlcoholLabel.textColor = UIColor.white
@@ -50,7 +50,7 @@ class DrinkItemView: UIView {
         
         itemStackView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         itemStackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        itemStackView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        itemStackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 20).isActive = true
         itemStackView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
     }
 }
