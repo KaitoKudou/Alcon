@@ -24,11 +24,7 @@ class DrinkTableView: UITableView {
     
     private func setLayoutTableView() {
         backgroundColor = UIColor(hex: "E0E0E0")
-        translatesAutoresizingMaskIntoConstraints = false
-        topAnchor.constraint(equalTo: topAnchor).isActive = true
-        bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        anchor(top: topAnchor, bottom: bottomAnchor, left: leftAnchor, right: rightAnchor)
         register(DrinkTableViewCell.self, forCellReuseIdentifier: "cell")
         delegate = self
         dataSource = self

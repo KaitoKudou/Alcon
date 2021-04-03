@@ -31,13 +31,9 @@ class DrinkTableViewCell: UITableViewCell {
         itemStackView.translatesAutoresizingMaskIntoConstraints = false
         itemStackView.axis = .horizontal
         itemStackView.distribution = .fillEqually
-        //itemStackView.spacing = 10
         addSubview(itemStackView)
         
-        itemStackView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        itemStackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        itemStackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 20).isActive = true
-        itemStackView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        itemStackView.anchor(top: topAnchor, bottom: bottomAnchor, left: leftAnchor, right: rightAnchor, leftPadding: 20)
     }
     
     required init?(coder: NSCoder) {

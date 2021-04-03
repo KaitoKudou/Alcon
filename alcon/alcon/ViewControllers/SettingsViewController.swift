@@ -24,13 +24,8 @@ class SettingsViewController: UIViewController {
         settingTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         settingTableView.backgroundColor = .white
         view.addSubview(settingTableView)
-        settingTableView.translatesAutoresizingMaskIntoConstraints = false
-        settingTableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        settingTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        settingTableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        settingTableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        settingTableView.anchor(top: view.topAnchor, bottom: view.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor)
     }
-    
 }
 
 extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {

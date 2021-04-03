@@ -25,20 +25,14 @@ class CalendarAndDrinkingRecordViewController: UIViewController {
         let drinkTableView = DrinkTableView()
         
         let stackView = UIStackView(arrangedSubviews: [goalView, calendarView, drinkItemView, drinkTableView])
-        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         
         self.view.addSubview(stackView)
-
+        stackView.anchor(top: view.safeAreaLayoutGuide.topAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor)
         [
             goalView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1, constant: 40),
             calendarView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.4, constant: 30),
-            drinkItemView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1, constant: -20),
-
-            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            stackView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            stackView.rightAnchor.constraint(equalTo: view.rightAnchor)].forEach({
+            drinkItemView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1, constant: -20),].forEach({
                 $0.isActive = true
             })
     }

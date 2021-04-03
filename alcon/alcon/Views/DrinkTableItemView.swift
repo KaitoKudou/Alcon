@@ -25,15 +25,11 @@ class DrinkItemView: UIView {
         let pureAlcoholLabel = DrinkInfoLabel(text: "純アルコール量", fontSize: 18, color: .white, alignment: .right)
         
         let itemStackView = UIStackView(arrangedSubviews: [itemLabel, capacityLabel, pureAlcoholLabel])
-        itemStackView.translatesAutoresizingMaskIntoConstraints = false
         itemStackView.axis = .horizontal
         itemStackView.distribution = .fillEqually
         itemStackView.spacing = 10
         addSubview(itemStackView)
         
-        itemStackView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        itemStackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        itemStackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 20).isActive = true
-        itemStackView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        itemStackView.anchor(top: topAnchor, bottom: bottomAnchor, left: leftAnchor, right: rightAnchor, leftPadding: 20)
     }
 }

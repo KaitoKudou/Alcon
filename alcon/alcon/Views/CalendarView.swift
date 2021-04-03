@@ -37,11 +37,7 @@ class CalendarView: UIView {
         calendar.delegate = self
         calendar.dataSource = self
         
-        calendar.translatesAutoresizingMaskIntoConstraints = false
-        calendar.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        calendar.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        calendar.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        calendar.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        calendar.anchor(top: topAnchor, bottom: bottomAnchor, left: leftAnchor, right: rightAnchor)
     }
 }
 
