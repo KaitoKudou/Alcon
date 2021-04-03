@@ -16,7 +16,7 @@ class CalendarAndDrinkingRecordViewController: UIViewController {
         navigationItem.title = "カレンダー"
 
         print("CalendarAndDrinkingRecordViewController")
-        addDrinkButton = UIBarButtonItem(image: UIImage(named: "add_drink")?.resize(size: .init(width: 40, height: 40)), style: .plain, target: self, action: #selector(toDrinkList))
+        addDrinkButton = UIBarButtonItem(image: UIImage(named: "add_drink")?.resize(size: .init(width: 40, height: 40)), style: .plain, target: self, action: #selector(toDrinkRecord))
         navigationItem.rightBarButtonItem = addDrinkButton
 
         let goalView = GoalView()
@@ -37,7 +37,9 @@ class CalendarAndDrinkingRecordViewController: UIViewController {
             })
     }
     
-    @objc func toDrinkList() {
+    @objc func toDrinkRecord() {
         print(#function)
+        let drinkRecordVC = DrinkRecordViewController()
+        navigationController?.pushViewController(drinkRecordVC, animated: true)
     }
 }
