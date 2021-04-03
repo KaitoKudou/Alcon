@@ -20,22 +20,14 @@ class GoalView: UIView {
     }
     
     func setupLabels() {
-        let titleGoalLabel = UILabel()
-        titleGoalLabel.text = "節酒目標"
-        titleGoalLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 20)
-        titleGoalLabel.textColor = UIColor(hex: "C3E2FF")
+        let titleGoalLabel = DrinkInfoLabel(text: "節酒目標", fontSize: 20, font: .boldSystemFont(ofSize: 20), color: UIColor(hex: "C3E2FF"), alignment: .left)
         addSubview(titleGoalLabel)
         titleGoalLabel.translatesAutoresizingMaskIntoConstraints = false
         titleGoalLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
         titleGoalLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 10).isActive = true
         titleGoalLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -10).isActive = true
         
-        let goalLabel = UILabel()
-        goalLabel.text = "1日5杯まで"
-        goalLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 25)
-        goalLabel.textAlignment = .left
-        goalLabel.numberOfLines = 0
-        goalLabel.textColor = UIColor(hex: "F1F8FF")
+        let goalLabel = DrinkInfoLabel(text: "1日5杯まで", fontSize: 25, font: .boldSystemFont(ofSize: 25), color: UIColor(hex: "F1F8FF"), alignment: .left, numberOfLines: 2)
         addSubview(goalLabel)
         goalLabel.translatesAutoresizingMaskIntoConstraints = false
         goalLabel.topAnchor.constraint(equalTo: titleGoalLabel.bottomAnchor, constant: 5).isActive = true

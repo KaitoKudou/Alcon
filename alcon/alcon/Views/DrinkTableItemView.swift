@@ -20,26 +20,9 @@ class DrinkItemView: UIView {
     }
     
     func setupLabels() {
-        let itemLabel = UILabel()
-        itemLabel.text = "内容"
-        itemLabel.font = UIFont.systemFont(ofSize: 18)
-        itemLabel.adjustsFontSizeToFitWidth = true
-        itemLabel.textAlignment = .left
-        itemLabel.textColor = UIColor.white
-        
-        let capacityLabel = UILabel()
-        capacityLabel.text = "容量"
-        capacityLabel.font = UIFont.systemFont(ofSize: 18)
-        capacityLabel.adjustsFontSizeToFitWidth = true
-        capacityLabel.textAlignment = .center
-        capacityLabel.textColor = UIColor.white
-        
-        let pureAlcoholLabel = UILabel()
-        pureAlcoholLabel.text = "純アルコール量"
-        pureAlcoholLabel.font = UIFont.systemFont(ofSize: 18)
-        pureAlcoholLabel.adjustsFontSizeToFitWidth = true
-        pureAlcoholLabel.textAlignment = .right
-        pureAlcoholLabel.textColor = UIColor.white
+        let itemLabel = DrinkInfoLabel(text: "内容", fontSize: 18, color: .white, alignment: .left)
+        let capacityLabel = DrinkInfoLabel(text: "容量", fontSize: 18, color: .white, alignment: .center)
+        let pureAlcoholLabel = DrinkInfoLabel(text: "純アルコール量", fontSize: 18, color: .white, alignment: .right)
         
         let itemStackView = UIStackView(arrangedSubviews: [itemLabel, capacityLabel, pureAlcoholLabel])
         itemStackView.translatesAutoresizingMaskIntoConstraints = false

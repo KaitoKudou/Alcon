@@ -9,32 +9,9 @@ import UIKit
 
 class DrinkTableViewCell: UITableViewCell {
     
-    let drinkNameLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 18)
-        label.textColor = UIColor.black
-        label.textAlignment = .left
-        label.adjustsFontSizeToFitWidth = true
-        return label
-    }()
-    
-    let capacityLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 18)
-        label.textColor = UIColor.black
-        label.textAlignment = .center
-        label.adjustsFontSizeToFitWidth = true
-        return label
-    }()
-    
-    let amountPureAlcoholLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 18)
-        label.textColor = UIColor.black
-        label.textAlignment = .center
-        label.adjustsFontSizeToFitWidth = true
-        return label
-    }()
+    private let drinkNameLabel = DrinkInfoLabel(fontSize: 18, alignment: .left)
+    private let capacityLabel = DrinkInfoLabel(fontSize: 18, alignment: .center)
+    private let amountPureAlcoholLabel = DrinkInfoLabel(fontSize: 18, alignment: .center)
     
     override func awakeFromNib() {
         super.awakeFromNib()
