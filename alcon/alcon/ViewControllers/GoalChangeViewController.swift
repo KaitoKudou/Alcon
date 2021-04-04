@@ -30,4 +30,11 @@ class GoalChangeViewController: UIViewController {
         goalTextView.anchor(top: characterCountLabel.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor,topPadding: 20, leftPadding: 20, rightPadding: 20)
         goalStorageButton.anchor(bottom: view.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, height: view.bounds.height * 0.1 - 30, bottomPadding: 20, leftPadding: 20, rightPadding: 20)
     }
+    
+    //入力画面またはkeyboardの外を押したら、キーボードを閉じる処理
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if (goalTextView.isFirstResponder) {
+            goalTextView.resignFirstResponder()
+        }
+    }
 }
