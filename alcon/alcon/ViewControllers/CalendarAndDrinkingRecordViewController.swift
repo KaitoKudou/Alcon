@@ -10,6 +10,7 @@ import UIKit
 class CalendarAndDrinkingRecordViewController: UIViewController {
 
     var addDrinkButton: UIBarButtonItem!
+    var shareButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .blue
@@ -17,7 +18,9 @@ class CalendarAndDrinkingRecordViewController: UIViewController {
 
         print("CalendarAndDrinkingRecordViewController")
         addDrinkButton = UIBarButtonItem(image: UIImage(named: "add_drink")?.resize(size: .init(width: 40, height: 40)), style: .plain, target: self, action: #selector(toDrinkRecord))
+        shareButton = UIBarButtonItem(image: UIImage(named: "share")?.resize(size: .init(width: 45, height: 45)), style: .plain, target: self, action: #selector(toDrinkRecord))
         navigationItem.rightBarButtonItem = addDrinkButton
+        navigationItem.leftBarButtonItem = shareButton
 
         let goalView = GoalView()
         let calendarView = CalendarView()
