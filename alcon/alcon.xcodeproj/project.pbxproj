@@ -180,16 +180,32 @@
 		44ADA207260CF36A00847822 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				44BF1070261A36730020CE7C /* CalendarScreen */,
+				44BF1074261A36CF0020CE7C /* UICustom */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		44BF1070261A36730020CE7C /* CalendarScreen */ = {
+			isa = PBXGroup;
+			children = (
 				44ADA209260CF51100847822 /* GoalView.swift */,
 				44ADA20E260CF53400847822 /* CalendarView.swift */,
 				44ADA21B260CF5F000847822 /* DrinkTableItemView.swift */,
 				44ADA220260CF61000847822 /* DrinkTableView.swift */,
 				440E156E26163665008ECB22 /* DrinkTableViewCell.swift */,
+			);
+			path = CalendarScreen;
+			sourceTree = "<group>";
+		};
+		44BF1074261A36CF0020CE7C /* UICustom */ = {
+			isa = PBXGroup;
+			children = (
 				444BF6A726183B9900ADBCAA /* DrinkInfoLabel.swift */,
 				44D615F42619C0A700524AD2 /* CustomTextView.swift */,
 				44D615F92619CBED00524AD2 /* CustomButton.swift */,
 			);
-			path = Views;
+			path = UICustom;
 			sourceTree = "<group>";
 		};
 		44D3A389260DA79500F14E38 /* Extension */ = {
