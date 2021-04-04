@@ -21,6 +21,7 @@
 		44A708A92619AB6F00B06A07 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 44A708A82619AB6F00B06A07 /* RxSwift */; };
 		44A708AB2619AB6F00B06A07 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 44A708AA2619AB6F00B06A07 /* RxCocoa */; };
 		44A708AD2619AB6F00B06A07 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 44A708AC2619AB6F00B06A07 /* RxRelay */; };
+		44A708B82619B81800B06A07 /* GoalChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A708B72619B81800B06A07 /* GoalChangeViewController.swift */; };
 		44ADA20A260CF51200847822 /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ADA209260CF51100847822 /* GoalView.swift */; };
 		44ADA20F260CF53400847822 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ADA20E260CF53400847822 /* CalendarView.swift */; };
 		44ADA21C260CF5F000847822 /* DrinkTableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ADA21B260CF5F000847822 /* DrinkTableItemView.swift */; };
@@ -30,6 +31,8 @@
 		44C24F1E260D676B005BB6A1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C24F1D260D676B005BB6A1 /* SettingsViewController.swift */; };
 		44C24F23260D68B9005BB6A1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C24F22260D68B9005BB6A1 /* MainTabBarController.swift */; };
 		44D3A38B260DA81100F14E38 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D3A38A260DA81100F14E38 /* UIColor-Extension.swift */; };
+		44D615F52619C0A700524AD2 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D615F42619C0A700524AD2 /* CustomTextView.swift */; };
+		44D615FA2619CBED00524AD2 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D615F92619CBED00524AD2 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,7 @@
 		444BF6A726183B9900ADBCAA /* DrinkInfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkInfoLabel.swift; sourceTree = "<group>"; };
 		4469C890261875380078B525 /* UIView-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-Extension.swift"; sourceTree = "<group>"; };
 		44A708A22618951E00B06A07 /* DrinkRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkRecordViewController.swift; sourceTree = "<group>"; };
+		44A708B72619B81800B06A07 /* GoalChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalChangeViewController.swift; sourceTree = "<group>"; };
 		44ADA209260CF51100847822 /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
 		44ADA20E260CF53400847822 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		44ADA21B260CF5F000847822 /* DrinkTableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTableItemView.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 		44C24F1D260D676B005BB6A1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		44C24F22260D68B9005BB6A1 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		44D3A38A260DA81100F14E38 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		44D615F42619C0A700524AD2 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
+		44D615F92619CBED00524AD2 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +172,7 @@
 				44C24F1D260D676B005BB6A1 /* SettingsViewController.swift */,
 				44C24F22260D68B9005BB6A1 /* MainTabBarController.swift */,
 				44A708A22618951E00B06A07 /* DrinkRecordViewController.swift */,
+				44A708B72619B81800B06A07 /* GoalChangeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -179,6 +186,8 @@
 				44ADA220260CF61000847822 /* DrinkTableView.swift */,
 				440E156E26163665008ECB22 /* DrinkTableViewCell.swift */,
 				444BF6A726183B9900ADBCAA /* DrinkInfoLabel.swift */,
+				44D615F42619C0A700524AD2 /* CustomTextView.swift */,
+				44D615F92619CBED00524AD2 /* CustomButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -333,6 +342,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				44ADA20F260CF53400847822 /* CalendarView.swift in Sources */,
+				44A708B82619B81800B06A07 /* GoalChangeViewController.swift in Sources */,
+				44D615FA2619CBED00524AD2 /* CustomButton.swift in Sources */,
 				44C24F19260D6743005BB6A1 /* CalendarAndDrinkingRecordViewController.swift in Sources */,
 				44C24F23260D68B9005BB6A1 /* MainTabBarController.swift in Sources */,
 				441F3842260BA8BC00BF0D79 /* AppDelegate.swift in Sources */,
@@ -340,6 +351,7 @@
 				443456D7260F6DEB002EA8F2 /* UIImage-Extension.swift in Sources */,
 				44A708A32618951E00B06A07 /* DrinkRecordViewController.swift in Sources */,
 				441F3844260BA8BC00BF0D79 /* SceneDelegate.swift in Sources */,
+				44D615F52619C0A700524AD2 /* CustomTextView.swift in Sources */,
 				44ADA20A260CF51200847822 /* GoalView.swift in Sources */,
 				444BF6A826183B9A00ADBCAA /* DrinkInfoLabel.swift in Sources */,
 				44ADA21C260CF5F000847822 /* DrinkTableItemView.swift in Sources */,
