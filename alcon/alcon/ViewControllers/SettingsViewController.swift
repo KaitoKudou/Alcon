@@ -64,4 +64,17 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return cell
     }
+    
+    // セルタップ時に呼ばれるメソッド
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            print("\(indexPath.section)セクション目の\(indexPath.row)番目の行が選択されました。")
+            let goalChangeViewController = GoalChangeViewController()
+            navigationController?.pushViewController(goalChangeViewController, animated: true)
+        } else if indexPath.section == 1 {
+            print("\(indexPath.section)セクション目の\(indexPath.row)番目の行が選択されました。")
+        } else if indexPath.section == 2 {
+            print("\(indexPath.section)セクション目の\(indexPath.row)番目の行が選択されました。")
+        }
+    }
 }
