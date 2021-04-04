@@ -15,6 +15,7 @@ class SettingsViewController: UIViewController {
     let sectionLabel1: NSArray = ["節酒目標"]
     let sectionLabel2: NSArray = ["1.0.0"]
     let sectionLabel3: NSArray = ["お問い合わせ", "利用規約", "プライバシーポリシー"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -53,7 +54,6 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        //cell.backgroundColor = UIColor(hex: "E0E0E0")
         if indexPath.section == 0 {
             cell.accessoryType = .disclosureIndicator
             cell.textLabel?.text = sectionLabel1[indexPath.row] as? String
@@ -63,5 +63,17 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             cell.textLabel?.text = sectionLabel3[indexPath.row] as? String
         }
         return cell
+    }
+    
+    // セルタップ時に呼ばれるメソッド
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            let goalChangeViewController = GoalChangeViewController()
+            navigationController?.pushViewController(goalChangeViewController, animated: true)
+        } else if indexPath.section == 1 {
+        } else if indexPath.section == 2 {
+        }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
