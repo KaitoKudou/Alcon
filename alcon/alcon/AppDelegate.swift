@@ -5,6 +5,7 @@
 //  Created by 工藤海斗 on 2021/03/25.
 //
 
+import Firebase
 import UIKit
 
 @main
@@ -23,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = UIColor(hex: "73AADD")
         UITabBar.appearance().barTintColor = .white
         UITabBar.appearance().isTranslucent = false
+        
+        FirebaseApp.configure()
+        
         return true
     }
 
