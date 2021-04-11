@@ -61,7 +61,7 @@ class GoalChangeViewController: UIViewController {
                 let inputTextLength = self.goalTextView.text.count
                 self.characterCountLabel.text = "\(inputTextLength)/30"
                 
-                if inputTextLength <= 30 {
+                if inputTextLength >= 1 && inputTextLength <= 30 {
                     self.goalStorageButton.isEnabled = true
                     self.goalStorageButton.backgroundColor = UIColor(hex: "C3E2FF")
                     self.goalStorageButton.setTitleColor(UIColor(hex: "73AADD"), for: .normal)
