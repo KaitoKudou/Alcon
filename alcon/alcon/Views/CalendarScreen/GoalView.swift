@@ -20,11 +20,11 @@ class GoalView: UIView {
     }
     
     func setupLabels() {
-        let titleGoalLabel = DrinkInfoLabel(text: "節酒目標", fontSize: 20, font: .boldSystemFont(ofSize: 20), color: UIColor(hex: "C3E2FF"), alignment: .left)
+        let titleGoalLabel = DrinkInfoLabel(text: "節酒目標", font: .boldSystemFont(ofSize: 20), color: UIColor(hex: "C3E2FF"), alignment: .left)
         addSubview(titleGoalLabel)
         titleGoalLabel.anchor(top: topAnchor, left: leftAnchor, right: rightAnchor, topPadding: 10, leftPadding: 10)
         
-        let goalLabel = DrinkInfoLabel(text: "1日5杯までああああああああああああああああああああ", font: .boldSystemFont(ofSize: 25), color: UIColor(hex: "F1F8FF"), alignment: .left, numberOfLines: 2)
+        let goalLabel = DrinkInfoLabel(text: "1日5杯までああああああああああああああああああああ", font: .boldSystemFont(ofSize: 20), color: UIColor(hex: "F1F8FF"), alignment: .left, numberOfLines: 2)
         addSubview(goalLabel)
         goalLabel.anchor(top: titleGoalLabel.bottomAnchor, left: titleGoalLabel.leftAnchor, right: titleGoalLabel.rightAnchor, topPadding: 5, leftPadding: 10)
     }
