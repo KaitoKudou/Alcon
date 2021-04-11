@@ -3,18 +3,36 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440E156F26163665008ECB22 /* DrinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440E156E26163665008ECB22 /* DrinkTableViewCell.swift */; };
 		441F3842260BA8BC00BF0D79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F3841260BA8BC00BF0D79 /* AppDelegate.swift */; };
 		441F3844260BA8BC00BF0D79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F3843260BA8BC00BF0D79 /* SceneDelegate.swift */; };
-		441F3846260BA8BC00BF0D79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F3845260BA8BC00BF0D79 /* ViewController.swift */; };
-		441F3849260BA8BC00BF0D79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441F3847260BA8BC00BF0D79 /* Main.storyboard */; };
 		441F384B260BA8C100BF0D79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 441F384A260BA8C100BF0D79 /* Assets.xcassets */; };
 		441F384E260BA8C100BF0D79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441F384C260BA8C100BF0D79 /* LaunchScreen.storyboard */; };
 		441F3859260BA8C100BF0D79 /* alconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F3858260BA8C100BF0D79 /* alconTests.swift */; };
 		441F3864260BA8C100BF0D79 /* alconUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F3863260BA8C100BF0D79 /* alconUITests.swift */; };
+		443456D7260F6DEB002EA8F2 /* UIImage-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443456D6260F6DEB002EA8F2 /* UIImage-Extension.swift */; };
+		444BF6A826183B9A00ADBCAA /* DrinkInfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444BF6A726183B9900ADBCAA /* DrinkInfoLabel.swift */; };
+		4469C891261875380078B525 /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4469C890261875380078B525 /* UIView-Extension.swift */; };
+		44A708A32618951E00B06A07 /* DrinkRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A708A22618951E00B06A07 /* DrinkRecordViewController.swift */; };
+		44A708A92619AB6F00B06A07 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 44A708A82619AB6F00B06A07 /* RxSwift */; };
+		44A708AB2619AB6F00B06A07 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 44A708AA2619AB6F00B06A07 /* RxCocoa */; };
+		44A708AD2619AB6F00B06A07 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 44A708AC2619AB6F00B06A07 /* RxRelay */; };
+		44A708B82619B81800B06A07 /* GoalChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A708B72619B81800B06A07 /* GoalChangeViewController.swift */; };
+		44ADA20A260CF51200847822 /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ADA209260CF51100847822 /* GoalView.swift */; };
+		44ADA20F260CF53400847822 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ADA20E260CF53400847822 /* CalendarView.swift */; };
+		44ADA21C260CF5F000847822 /* DrinkTableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ADA21B260CF5F000847822 /* DrinkTableItemView.swift */; };
+		44ADA221260CF61000847822 /* DrinkTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ADA220260CF61000847822 /* DrinkTableView.swift */; };
+		44B9B422260F7A6800DB3FE6 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 44B9B421260F7A6800DB3FE6 /* FSCalendar */; };
+		44C24F19260D6743005BB6A1 /* CalendarAndDrinkingRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C24F18260D6743005BB6A1 /* CalendarAndDrinkingRecordViewController.swift */; };
+		44C24F1E260D676B005BB6A1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C24F1D260D676B005BB6A1 /* SettingsViewController.swift */; };
+		44C24F23260D68B9005BB6A1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C24F22260D68B9005BB6A1 /* MainTabBarController.swift */; };
+		44D3A38B260DA81100F14E38 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D3A38A260DA81100F14E38 /* UIColor-Extension.swift */; };
+		44D615F52619C0A700524AD2 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D615F42619C0A700524AD2 /* CustomTextView.swift */; };
+		44D615FA2619CBED00524AD2 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D615F92619CBED00524AD2 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		440E156E26163665008ECB22 /* DrinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTableViewCell.swift; sourceTree = "<group>"; };
 		441F383E260BA8BC00BF0D79 /* alcon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alcon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		441F3841260BA8BC00BF0D79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		441F3843260BA8BC00BF0D79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		441F3845260BA8BC00BF0D79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		441F3848260BA8BC00BF0D79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		441F384A260BA8C100BF0D79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		441F384D260BA8C100BF0D79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		441F384F260BA8C100BF0D79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +66,21 @@
 		441F385F260BA8C100BF0D79 /* alconUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = alconUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		441F3863260BA8C100BF0D79 /* alconUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alconUITests.swift; sourceTree = "<group>"; };
 		441F3865260BA8C100BF0D79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		443456D6260F6DEB002EA8F2 /* UIImage-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage-Extension.swift"; sourceTree = "<group>"; };
+		444BF6A726183B9900ADBCAA /* DrinkInfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkInfoLabel.swift; sourceTree = "<group>"; };
+		4469C890261875380078B525 /* UIView-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-Extension.swift"; sourceTree = "<group>"; };
+		44A708A22618951E00B06A07 /* DrinkRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkRecordViewController.swift; sourceTree = "<group>"; };
+		44A708B72619B81800B06A07 /* GoalChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalChangeViewController.swift; sourceTree = "<group>"; };
+		44ADA209260CF51100847822 /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
+		44ADA20E260CF53400847822 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		44ADA21B260CF5F000847822 /* DrinkTableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTableItemView.swift; sourceTree = "<group>"; };
+		44ADA220260CF61000847822 /* DrinkTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTableView.swift; sourceTree = "<group>"; };
+		44C24F18260D6743005BB6A1 /* CalendarAndDrinkingRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAndDrinkingRecordViewController.swift; sourceTree = "<group>"; };
+		44C24F1D260D676B005BB6A1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		44C24F22260D68B9005BB6A1 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		44D3A38A260DA81100F14E38 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		44D615F42619C0A700524AD2 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
+		44D615F92619CBED00524AD2 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +88,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44A708AB2619AB6F00B06A07 /* RxCocoa in Frameworks */,
+				44A708A92619AB6F00B06A07 /* RxSwift in Frameworks */,
+				44A708AD2619AB6F00B06A07 /* RxRelay in Frameworks */,
+				44B9B422260F7A6800DB3FE6 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,8 +137,9 @@
 			children = (
 				441F3841260BA8BC00BF0D79 /* AppDelegate.swift */,
 				441F3843260BA8BC00BF0D79 /* SceneDelegate.swift */,
-				441F3845260BA8BC00BF0D79 /* ViewController.swift */,
-				441F3847260BA8BC00BF0D79 /* Main.storyboard */,
+				44D3A389260DA79500F14E38 /* Extension */,
+				44ADA207260CF36A00847822 /* Views */,
+				442C46D9260D8AD600A2A8EF /* ViewControllers */,
 				441F384A260BA8C100BF0D79 /* Assets.xcassets */,
 				441F384C260BA8C100BF0D79 /* LaunchScreen.storyboard */,
 				441F384F260BA8C100BF0D79 /* Info.plist */,
@@ -128,6 +165,59 @@
 			path = alconUITests;
 			sourceTree = "<group>";
 		};
+		442C46D9260D8AD600A2A8EF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				44C24F18260D6743005BB6A1 /* CalendarAndDrinkingRecordViewController.swift */,
+				44C24F1D260D676B005BB6A1 /* SettingsViewController.swift */,
+				44C24F22260D68B9005BB6A1 /* MainTabBarController.swift */,
+				44A708A22618951E00B06A07 /* DrinkRecordViewController.swift */,
+				44A708B72619B81800B06A07 /* GoalChangeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		44ADA207260CF36A00847822 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44BF1070261A36730020CE7C /* CalendarScreen */,
+				44BF1074261A36CF0020CE7C /* UICustom */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		44BF1070261A36730020CE7C /* CalendarScreen */ = {
+			isa = PBXGroup;
+			children = (
+				44ADA209260CF51100847822 /* GoalView.swift */,
+				44ADA20E260CF53400847822 /* CalendarView.swift */,
+				44ADA21B260CF5F000847822 /* DrinkTableItemView.swift */,
+				44ADA220260CF61000847822 /* DrinkTableView.swift */,
+				440E156E26163665008ECB22 /* DrinkTableViewCell.swift */,
+			);
+			path = CalendarScreen;
+			sourceTree = "<group>";
+		};
+		44BF1074261A36CF0020CE7C /* UICustom */ = {
+			isa = PBXGroup;
+			children = (
+				444BF6A726183B9900ADBCAA /* DrinkInfoLabel.swift */,
+				44D615F42619C0A700524AD2 /* CustomTextView.swift */,
+				44D615F92619CBED00524AD2 /* CustomButton.swift */,
+			);
+			path = UICustom;
+			sourceTree = "<group>";
+		};
+		44D3A389260DA79500F14E38 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				44D3A38A260DA81100F14E38 /* UIColor-Extension.swift */,
+				443456D6260F6DEB002EA8F2 /* UIImage-Extension.swift */,
+				4469C890261875380078B525 /* UIView-Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +234,12 @@
 			dependencies = (
 			);
 			name = alcon;
+			packageProductDependencies = (
+				44B9B421260F7A6800DB3FE6 /* FSCalendar */,
+				44A708A82619AB6F00B06A07 /* RxSwift */,
+				44A708AA2619AB6F00B06A07 /* RxCocoa */,
+				44A708AC2619AB6F00B06A07 /* RxRelay */,
+			);
 			productName = alcon;
 			productReference = 441F383E260BA8BC00BF0D79 /* alcon.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +311,10 @@
 				Base,
 			);
 			mainGroup = 441F3835260BA8BC00BF0D79;
+			packageReferences = (
+				44B9B420260F7A6800DB3FE6 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				44A708A72619AB6F00B06A07 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 441F383F260BA8BC00BF0D79 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +333,6 @@
 			files = (
 				441F384E260BA8C100BF0D79 /* LaunchScreen.storyboard in Resources */,
 				441F384B260BA8C100BF0D79 /* Assets.xcassets in Resources */,
-				441F3849260BA8BC00BF0D79 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +357,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				441F3846260BA8BC00BF0D79 /* ViewController.swift in Sources */,
+				44ADA20F260CF53400847822 /* CalendarView.swift in Sources */,
+				44A708B82619B81800B06A07 /* GoalChangeViewController.swift in Sources */,
+				44D615FA2619CBED00524AD2 /* CustomButton.swift in Sources */,
+				44C24F19260D6743005BB6A1 /* CalendarAndDrinkingRecordViewController.swift in Sources */,
+				44C24F23260D68B9005BB6A1 /* MainTabBarController.swift in Sources */,
 				441F3842260BA8BC00BF0D79 /* AppDelegate.swift in Sources */,
+				44ADA221260CF61000847822 /* DrinkTableView.swift in Sources */,
+				443456D7260F6DEB002EA8F2 /* UIImage-Extension.swift in Sources */,
+				44A708A32618951E00B06A07 /* DrinkRecordViewController.swift in Sources */,
 				441F3844260BA8BC00BF0D79 /* SceneDelegate.swift in Sources */,
+				44D615F52619C0A700524AD2 /* CustomTextView.swift in Sources */,
+				44ADA20A260CF51200847822 /* GoalView.swift in Sources */,
+				444BF6A826183B9A00ADBCAA /* DrinkInfoLabel.swift in Sources */,
+				44ADA21C260CF5F000847822 /* DrinkTableItemView.swift in Sources */,
+				4469C891261875380078B525 /* UIView-Extension.swift in Sources */,
+				44C24F1E260D676B005BB6A1 /* SettingsViewController.swift in Sources */,
+				440E156F26163665008ECB22 /* DrinkTableViewCell.swift in Sources */,
+				44D3A38B260DA81100F14E38 /* UIColor-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +410,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		441F3847260BA8BC00BF0D79 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				441F3848260BA8BC00BF0D79 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		441F384C260BA8C100BF0D79 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -593,6 +699,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		44A708A72619AB6F00B06A07 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.0;
+			};
+		};
+		44B9B420260F7A6800DB3FE6 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		44A708A82619AB6F00B06A07 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44A708A72619AB6F00B06A07 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		44A708AA2619AB6F00B06A07 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44A708A72619AB6F00B06A07 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		44A708AC2619AB6F00B06A07 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44A708A72619AB6F00B06A07 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		44B9B421260F7A6800DB3FE6 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44B9B420260F7A6800DB3FE6 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 441F3836260BA8BC00BF0D79 /* Project object */;
 }

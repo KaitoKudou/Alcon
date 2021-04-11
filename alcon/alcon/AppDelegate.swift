@@ -14,6 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //ナビゲーションバー
+        UINavigationBar.appearance().tintColor = UIColor(hex: "73AADD")
+        UINavigationBar.appearance().barTintColor = UIColor(hex: "C3E2FF")
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(hex: "73AADD"), NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 25)]
+        //タブバーコントローラー
+        UITabBar.appearance().tintColor = UIColor(hex: "73AADD")
+        UITabBar.appearance().barTintColor = .white
+        UITabBar.appearance().isTranslucent = false
         return true
     }
 
