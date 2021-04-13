@@ -54,4 +54,8 @@ extension DrinkRecordViewController: UITableViewDelegate, UITableViewDataSource 
         return 50
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }
