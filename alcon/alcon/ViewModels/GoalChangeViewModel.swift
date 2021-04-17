@@ -22,7 +22,6 @@ class GoalChangeViewModel {
                 print("節酒目標変更失敗: \(err)")
             } else {
                 userDefaults.setValue(goal, forKey: goalKey)
-                userDefaults.synchronize()
                 print("節酒目標変更成功")
             }
         }
