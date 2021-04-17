@@ -19,6 +19,11 @@ class CalendarAndDrinkingRecordViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = "カレンダー"
         setupLayout()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        setupLayout()
         setupBindings()
     }
     

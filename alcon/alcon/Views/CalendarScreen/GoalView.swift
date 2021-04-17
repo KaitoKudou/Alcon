@@ -9,6 +9,9 @@ import UIKit
 
 class GoalView: UIView {
     
+    private let userDefaults = UserDefaults()
+    private let goalKey: String = "goal"
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = UIColor(hex: "73AADD")
@@ -24,7 +27,7 @@ class GoalView: UIView {
         addSubview(titleGoalLabel)
         titleGoalLabel.anchor(top: topAnchor, left: leftAnchor, right: rightAnchor, topPadding: 10, leftPadding: 10)
         
-        let goalLabel = DrinkInfoLabel(text: "1日5杯までああああああああああああああああああああ", font: .boldSystemFont(ofSize: 20), color: UIColor(hex: "F1F8FF"), alignment: .left, numberOfLines: 2)
+        let goalLabel = DrinkInfoLabel(text: userDefaults.string(forKey: goalKey) ?? "", font: .boldSystemFont(ofSize: 20), color: UIColor(hex: "F1F8FF"), alignment: .left, numberOfLines: 2)
         addSubview(goalLabel)
         goalLabel.anchor(top: titleGoalLabel.bottomAnchor, left: titleGoalLabel.leftAnchor, right: titleGoalLabel.rightAnchor, topPadding: 5, leftPadding: 10)
     }
