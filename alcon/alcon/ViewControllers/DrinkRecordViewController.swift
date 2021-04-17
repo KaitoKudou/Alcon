@@ -13,6 +13,8 @@ class DrinkRecordViewController: UIViewController {
     let drinkItemView = DrinkItemView()
     let drinkRecordViewModel = DrinkRecordViewModel()
     var drinks = [Drinks]() // お酒一覧
+    private let userDefaults = UserDefaults()
+    private let dateKey: String = "date"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +57,8 @@ extension DrinkRecordViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let drinkName = drinks[indexPath.row].type, let capacity = drinks[indexPath.row].capacity, let pureAlcohol = drinks[indexPath.row].pureAlcohol else { return }
+        drinkRecordViewModel.registerDailyDrink(date: userDefaults.string(forKey: dateKey) ?? "", drinkName: drinkName, capacity: capacity, pureAlcohol: pureAlcohol)
         navigationController?.popViewController(animated: true)
     }
     
