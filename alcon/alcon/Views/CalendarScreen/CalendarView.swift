@@ -10,11 +10,22 @@ import FSCalendar
 
 class CalendarView: UIView {
     fileprivate weak var calendar: FSCalendar!
-    let dayOfTheWeeks = ["日":0, "月":1, "火":2, "水":3, "木":4, "金":5, "土":6]
+    private let dayOfTheWeeks = ["日":0, "月":1, "火":2, "水":3, "木":4, "金":5, "土":6]
+    private let userDefaults = UserDefaults()
+    private let dateKey: String = "date"
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupCalendar()
+        
+        // 今日の日付を取得
+        let dateFormatter = DateFormatter()
+        dateFormatter.calendar = Calendar(identifier: .gregorian)
+        dateFormatter.locale = Locale(identifier: "ja_JP")
+        dateFormatter.dateFormat = "yyyy/M/d"
+        let dateString = dateFormatter.string(from: Date())
+        //print(dateString)
+        userDefaults.set(dateString, forKey: dateKey)
     }
     
     required init?(coder: NSCoder) {
@@ -48,6 +59,7 @@ extension CalendarView: FSCalendarDelegate, FSCalendarDataSource {
         let month = tmpDate.component(.month, from: date)
         let day = tmpDate.component(.day, from: date)
 
-        print("\(year)/\(month)/\(day)")
+        //print("\(year)/\(month)/\(day)")
+        userDefaults.set("\(year)/\(month)/\(day)", forKey: dateKey)
     }
 }
