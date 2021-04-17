@@ -28,4 +28,27 @@ class DrinkRecordViewModel {
             completion(drinks ?? [Drinks]())
         }
     }
+    
+    func createDoucumentsID() -> String {
+        let randomString = "abcdefghijklmnopqrstuvwsyzABCDEFGHIJKLMNOPQRSTUVWSYZ0123456789-"
+        var id = ""
+        for _ in 0 ..< 31 {
+            let stringElement = randomString.randomElement()
+            id.append(stringElement!)
+        }
+        return id
+    }
+    
+    func registerDailyDrink(date: String, drinkName: String, capacity: Int, pureAlcohol: Int) {
+        let firestore = Firestore.firestore()
+        let drinkDoc: [String: Any] = ["date": date, "drinkName": drinkName, "capacity": capacity, "pureAlcohol": pureAlcohol]
+        firestore.collection("users").document(UIDevice.current.identifierForVendor!.uuidString).collection("drink").document(createDoucumentsID.self()).setData(drinkDoc) { (err) in
+            if let err = err {
+                print("飲酒記録書き込み失敗: \(err)")
+            } else {
+                print("飲酒記録書き込み成功")
+            }
+        }
+        
+    }
 }
