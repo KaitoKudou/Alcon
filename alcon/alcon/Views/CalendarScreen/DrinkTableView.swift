@@ -13,11 +13,21 @@ class DrinkTableView: UITableView {
     var capacityArray: [Int] = [120, 350, 350]
     var pureAlcoholArray: [Int] = [11, 14, 25]
     private let drinkTableViewModel = DrinkTableViewModel()
+    private let userDefaults = UserDefaults()
+    private let dateKey: String = "date"
+    var drinks = [Drinks]() // 日付ごとのお酒
     
-    override init(frame: CGRect, style: UITableView.Style) {
-        super.init(frame: frame, style: .plain)
-        drinkTableViewModel.fetchDailyDrinkList()
+    init(style: UITableView.Style) {
+        super.init(frame: .zero, style: .plain)
+        let date = userDefaults.string(forKey: dateKey) ?? ""
+        drinkTableViewModel.fetchDailyDrinkList(date: date, completion: { [weak self] (drinks) in
+            guard self != nil else { return }
+            self?.drinks = drinks
+            self?.reloadData()
+            
+        })
         setLayoutTableView()
+        NotificationCenter.default.addObserver(self, selector: #selector(updateDailyDrinkList(notification:)), name: .applyDrink, object: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -31,18 +41,24 @@ class DrinkTableView: UITableView {
         delegate = self
         dataSource = self
     }
+    
+    @objc func updateDailyDrinkList(notification: NSNotification?) {
+        let drinks = notification?.userInfo!["drinks"]
+        self.drinks = drinks as? [Drinks] ?? [Drinks]()
+        reloadData()
+    }
 }
 
 extension DrinkTableView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return drinks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! DrinkTableViewCell
         cell.backgroundColor = UIColor(hex: "E0E0E0")
-        cell.setCell(drinkName: drinkNameArray[indexPath.row], capacity: capacityArray[indexPath.row
-        ], pureAlcohol: pureAlcoholArray[indexPath.row])
+        cell.setCell(drinkName: drinks[indexPath.row].type ?? "", capacity: drinks[indexPath.row
+        ].capacity ?? 0, pureAlcohol: drinks[indexPath.row].pureAlcohol ?? 0)
         return cell
     }
     
