@@ -10,9 +10,9 @@ import Foundation
 
 class DrinkTableViewModel {
     
-    func fetchDailyDrinkList() {
+    func fetchDailyDrinkList(date: String, completion: @escaping ([Drinks]) -> Void) {
         let firestore = Firestore.firestore()
-        firestore.collection("users").document(UIDevice.current.identifierForVendor!.uuidString).collection("drink").getDocuments { [weak self] (querySnapshots, err) in
+        firestore.collection("users").document(UIDevice.current.identifierForVendor!.uuidString).collection("drink").whereField("date", isEqualTo: date).getDocuments { [weak self] (querySnapshots, err) in
             guard self != nil else { return }
             
             if let err = err {
@@ -25,7 +25,7 @@ class DrinkTableViewModel {
                 let drink: Drinks = Drinks(dic: dic)
                 return drink
             })
-            print(drinks ?? [Drinks]())
+            completion(drinks ?? [Drinks]())
         }
     }
 }
