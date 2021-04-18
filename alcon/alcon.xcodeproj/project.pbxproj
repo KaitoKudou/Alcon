@@ -18,6 +18,7 @@
 		441F3864260BA8C100BF0D79 /* alconUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F3863260BA8C100BF0D79 /* alconUITests.swift */; };
 		443456D7260F6DEB002EA8F2 /* UIImage-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443456D6260F6DEB002EA8F2 /* UIImage-Extension.swift */; };
 		444BF6A826183B9A00ADBCAA /* DrinkInfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444BF6A726183B9900ADBCAA /* DrinkInfoLabel.swift */; };
+		4454CF30262C78F700A67277 /* Notification-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4454CF2F262C78F700A67277 /* Notification-Extension.swift */; };
 		44553DB1262344FA007073E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44553DB0262344FA007073E1 /* GoogleService-Info.plist */; };
 		44553DE226235853007073E1 /* DrinkRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44553DE126235853007073E1 /* DrinkRecordViewModel.swift */; };
 		44553DEB26235E31007073E1 /* Drinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44553DEA26235E31007073E1 /* Drinks.swift */; };
@@ -81,6 +82,7 @@
 		441F3865260BA8C100BF0D79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		443456D6260F6DEB002EA8F2 /* UIImage-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage-Extension.swift"; sourceTree = "<group>"; };
 		444BF6A726183B9900ADBCAA /* DrinkInfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkInfoLabel.swift; sourceTree = "<group>"; };
+		4454CF2F262C78F700A67277 /* Notification-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification-Extension.swift"; sourceTree = "<group>"; };
 		44553DB0262344FA007073E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		44553DE126235853007073E1 /* DrinkRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkRecordViewModel.swift; sourceTree = "<group>"; };
 		44553DEA26235E31007073E1 /* Drinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drinks.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				44D3A38A260DA81100F14E38 /* UIColor-Extension.swift */,
 				443456D6260F6DEB002EA8F2 /* UIImage-Extension.swift */,
 				4469C890261875380078B525 /* UIView-Extension.swift */,
+				4454CF2F262C78F700A67277 /* Notification-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				444BF6A826183B9A00ADBCAA /* DrinkInfoLabel.swift in Sources */,
 				44ADA21C260CF5F000847822 /* DrinkTableItemView.swift in Sources */,
 				4469C891261875380078B525 /* UIView-Extension.swift in Sources */,
+				4454CF30262C78F700A67277 /* Notification-Extension.swift in Sources */,
 				44C24F1E260D676B005BB6A1 /* SettingsViewController.swift in Sources */,
 				440E156F26163665008ECB22 /* DrinkTableViewCell.swift in Sources */,
 				44D3A38B260DA81100F14E38 /* UIColor-Extension.swift in Sources */,
