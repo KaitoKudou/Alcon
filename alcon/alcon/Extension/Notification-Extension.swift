@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+extension Notification.Name {
+    static let applyDrink = Notification.Name("applyDrink")
+    static let applyGoal = Notification.Name("applyGoal")
+}
