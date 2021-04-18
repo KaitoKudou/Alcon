@@ -36,7 +36,7 @@ class CalendarAndDrinkingRecordViewController: UIViewController {
         let goalView = GoalView()
         let calendarView = CalendarView()
         let drinkItemView = DrinkItemView()
-        let drinkTableView = DrinkTableView()
+        let drinkTableView = DrinkTableView(style: .plain)
         let stackView = UIStackView(arrangedSubviews: [goalView, calendarView, drinkItemView, drinkTableView])
         stackView.axis = .vertical
         self.view.addSubview(stackView)
@@ -63,7 +63,7 @@ class CalendarAndDrinkingRecordViewController: UIViewController {
         shareButton.rx.tap
             .asDriver()
             .drive { [weak self] _ in
-                guard let self = self else { return }
+                guard self != nil else { return }
                 print(#function)
             }
             .disposed(by: disposeBag)
