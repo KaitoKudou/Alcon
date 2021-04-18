@@ -13,6 +13,7 @@ class CalendarView: UIView {
     private let dayOfTheWeeks = ["日":0, "月":1, "火":2, "水":3, "木":4, "金":5, "土":6]
     private let userDefaults = UserDefaults()
     private let dateKey: String = "date"
+    private let drinkTableViewModel = DrinkTableViewModel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,7 +25,6 @@ class CalendarView: UIView {
         dateFormatter.locale = Locale(identifier: "ja_JP")
         dateFormatter.dateFormat = "yyyy/M/d"
         let dateString = dateFormatter.string(from: Date())
-        //print(dateString)
         userDefaults.set(dateString, forKey: dateKey)
     }
     
@@ -59,7 +59,10 @@ extension CalendarView: FSCalendarDelegate, FSCalendarDataSource {
         let month = tmpDate.component(.month, from: date)
         let day = tmpDate.component(.day, from: date)
 
-        //print("\(year)/\(month)/\(day)")
         userDefaults.set("\(year)/\(month)/\(day)", forKey: dateKey)
+        drinkTableViewModel.fetchDailyDrinkList(date: "\(year)/\(month)/\(day)", completion: { [weak self] drinks in
+            guard self != nil else { return }
+            NotificationCenter.default.post(name: .applyDrink, object: nil, userInfo: ["drinks": drinks])
+        })
     }
 }
