@@ -12,13 +12,14 @@ class DrinkTableView: UITableView {
     var drinkNameArray: [String] = ["ワイン(グラス)", "ビール350ml", "ハイボール"]
     var capacityArray: [Int] = [120, 350, 350]
     var pureAlcoholArray: [Int] = [11, 14, 25]
-    private let drinkTableViewModel = DrinkTableViewModel()
+    private var drinkTableViewModel: DrinkTableViewModel!
     private let userDefaults = UserDefaults()
     private let dateKey: String = "date"
     var drinks = [Drinks]() // 日付ごとのお酒
     
     init(style: UITableView.Style) {
         super.init(frame: .zero, style: .plain)
+        drinkTableViewModel = DrinkTableViewModel()
         let date = userDefaults.string(forKey: dateKey) ?? ""
         drinkTableViewModel.fetchDailyDrinkList(date: date, completion: { [weak self] (drinks) in
             guard self != nil else { return }
