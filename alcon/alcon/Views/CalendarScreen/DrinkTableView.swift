@@ -12,9 +12,11 @@ class DrinkTableView: UITableView {
     var drinkNameArray: [String] = ["ワイン(グラス)", "ビール350ml", "ハイボール"]
     var capacityArray: [Int] = [120, 350, 350]
     var pureAlcoholArray: [Int] = [11, 14, 25]
+    private let drinkTableViewModel = DrinkTableViewModel()
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: .plain)
+        drinkTableViewModel.fetchDailyDrinkList()
         setLayoutTableView()
     }
     
