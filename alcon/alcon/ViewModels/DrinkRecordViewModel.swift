@@ -41,7 +41,7 @@ class DrinkRecordViewModel {
     
     func registerDailyDrink(date: String, drinkName: String, capacity: Int, pureAlcohol: Int) {
         let firestore = Firestore.firestore()
-        let drinkDoc: [String: Any] = ["date": date, "drinkName": drinkName, "capacity": capacity, "pureAlcohol": pureAlcohol]
+        let drinkDoc: [String: Any] = ["date": date, "type": drinkName, "capacity": capacity, "pureAlcohol": pureAlcohol]
         firestore.collection("users").document(UIDevice.current.identifierForVendor!.uuidString).collection("drink").document(createDoucumentsID.self()).setData(drinkDoc) { (err) in
             if let err = err {
                 print("飲酒記録書き込み失敗: \(err)")
