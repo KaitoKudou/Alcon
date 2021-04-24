@@ -73,8 +73,8 @@ extension DrinkTableView: UITableViewDelegate, UITableViewDataSource {
     // TableViewCellをスワイプで削除
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         let date = userDefaults.string(forKey: dateKey) ?? ""
-        print(date, drinks[indexPath.row])
         if editingStyle == UITableViewCell.EditingStyle.delete {
+            drinkTableViewModel.deleteDailyDrinkList(date: date, drinks: drinks[indexPath.row])
             drinks.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
