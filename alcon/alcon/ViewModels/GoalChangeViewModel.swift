@@ -25,6 +25,5 @@ class GoalChangeViewModel {
                 print("節酒目標変更成功")
             }
         }
-        print(UIDevice.current.identifierForVendor!.uuidString)
     }
 }
