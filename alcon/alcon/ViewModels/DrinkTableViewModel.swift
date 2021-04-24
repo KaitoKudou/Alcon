@@ -28,4 +28,21 @@ class DrinkTableViewModel {
             completion(drinks ?? [Drinks]())
         }
     }
+    
+    func deleteDailyDrinkList(date: String, drinks: Drinks) {
+        let firestore = Firestore.firestore()
+        firestore.collection("users").document(UIDevice.current.identifierForVendor!.uuidString).collection("drink").whereField("date", isEqualTo: date).whereField("type", isEqualTo: drinks.type ?? "").whereField("capacity", isEqualTo: drinks.capacity ?? 0).whereField("pureAlcohol", isEqualTo: drinks.pureAlcohol ?? 0).getDocuments { [weak self] (querySnapshots, err) in
+            
+            guard self != nil else { return }
+            
+            if let err = err {
+                print("日付別飲酒記録読み込み失敗: \(err)")
+                return
+            }
+            
+            for document in querySnapshots!.documents {
+                firestore.collection("users").document(UIDevice.current.identifierForVendor!.uuidString).collection("drink").document(document.documentID).delete()
+            }
+        }
+    }
 }
