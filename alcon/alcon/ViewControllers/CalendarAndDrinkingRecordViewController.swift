@@ -64,7 +64,6 @@ class CalendarAndDrinkingRecordViewController: UIViewController {
             .asDriver()
             .drive { [weak self] _ in
                 guard let self = self else { return }
-                let text = "text"
                 let items = [ActivityText()]
                 let activeViewCotntroller = UIActivityViewController(activityItems: items, applicationActivities: nil)
                 self.present(activeViewCotntroller,animated:true,completion:nil)
