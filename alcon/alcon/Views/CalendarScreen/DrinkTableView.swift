@@ -9,9 +9,6 @@ import UIKit
 
 class DrinkTableView: UITableView {
     
-    var drinkNameArray: [String] = ["ワイン(グラス)", "ビール350ml", "ハイボール"]
-    var capacityArray: [Int] = [120, 350, 350]
-    var pureAlcoholArray: [Int] = [11, 14, 25]
     private var drinkTableViewModel: DrinkTableViewModel!
     private let userDefaults = UserDefaults()
     private let dateKey: String = "date"
@@ -63,7 +60,23 @@ extension DrinkTableView: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    // TableViewCellの高さ
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
+    }
+    
+    // TableViewCellの編集許可
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    // TableViewCellをスワイプで削除
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let date = userDefaults.string(forKey: dateKey) ?? ""
+        print(date, drinks[indexPath.row])
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            drinks.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
 }
