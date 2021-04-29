@@ -63,8 +63,10 @@ class CalendarAndDrinkingRecordViewController: UIViewController {
         shareButton.rx.tap
             .asDriver()
             .drive { [weak self] _ in
-                guard self != nil else { return }
-                print(#function)
+                guard let self = self else { return }
+                let items = [ActivityText()]
+                let activeViewCotntroller = UIActivityViewController(activityItems: items, applicationActivities: nil)
+                self.present(activeViewCotntroller,animated:true,completion:nil)
             }
             .disposed(by: disposeBag)
     }

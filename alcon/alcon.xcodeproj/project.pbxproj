@@ -41,6 +41,7 @@
 		44D3A38B260DA81100F14E38 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D3A38A260DA81100F14E38 /* UIColor-Extension.swift */; };
 		44D615F52619C0A700524AD2 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D615F42619C0A700524AD2 /* CustomTextView.swift */; };
 		44D615FA2619CBED00524AD2 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D615F92619CBED00524AD2 /* CustomButton.swift */; };
+		44ECC14E26346AA100B8852B /* ActivityText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ECC14D26346AA100B8852B /* ActivityText.swift */; };
 		D2D1EE5BC04B7661EF07E4D1 /* Pods_alcon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59C9F1B752DBE344BBB5A2C /* Pods_alcon.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,7 @@
 		44D3A38A260DA81100F14E38 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		44D615F42619C0A700524AD2 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		44D615F92619CBED00524AD2 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		44ECC14D26346AA100B8852B /* ActivityText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityText.swift; sourceTree = "<group>"; };
 		4B5C554C85EDF7DBC787A98B /* Pods-alcon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alcon.release.xcconfig"; path = "Target Support Files/Pods-alcon/Pods-alcon.release.xcconfig"; sourceTree = "<group>"; };
 		72C85C337AA95578C1DA76DF /* Pods-alcon-alconUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alcon-alconUITests.debug.xcconfig"; path = "Target Support Files/Pods-alcon-alconUITests/Pods-alcon-alconUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A59C9F1B752DBE344BBB5A2C /* Pods_alcon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alcon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -277,6 +279,7 @@
 				444BF6A726183B9900ADBCAA /* DrinkInfoLabel.swift */,
 				44D615F42619C0A700524AD2 /* CustomTextView.swift */,
 				44D615F92619CBED00524AD2 /* CustomButton.swift */,
+				44ECC14D26346AA100B8852B /* ActivityText.swift */,
 			);
 			path = UICustom;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				44C24F1E260D676B005BB6A1 /* SettingsViewController.swift in Sources */,
 				440E156F26163665008ECB22 /* DrinkTableViewCell.swift in Sources */,
 				44D3A38B260DA81100F14E38 /* UIColor-Extension.swift in Sources */,
+				44ECC14E26346AA100B8852B /* ActivityText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
