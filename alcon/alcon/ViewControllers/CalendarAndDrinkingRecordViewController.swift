@@ -19,6 +19,11 @@ class CalendarAndDrinkingRecordViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = "カレンダー"
         setupLayout()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        setupLayout()
         setupBindings()
     }
     
@@ -31,7 +36,7 @@ class CalendarAndDrinkingRecordViewController: UIViewController {
         let goalView = GoalView()
         let calendarView = CalendarView()
         let drinkItemView = DrinkItemView()
-        let drinkTableView = DrinkTableView()
+        let drinkTableView = DrinkTableView(style: .plain)
         let stackView = UIStackView(arrangedSubviews: [goalView, calendarView, drinkItemView, drinkTableView])
         stackView.axis = .vertical
         self.view.addSubview(stackView)
@@ -59,7 +64,9 @@ class CalendarAndDrinkingRecordViewController: UIViewController {
             .asDriver()
             .drive { [weak self] _ in
                 guard let self = self else { return }
-                print(#function)
+                let items = [ActivityText()]
+                let activeViewCotntroller = UIActivityViewController(activityItems: items, applicationActivities: nil)
+                self.present(activeViewCotntroller,animated:true,completion:nil)
             }
             .disposed(by: disposeBag)
     }

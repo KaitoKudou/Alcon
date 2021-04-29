@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1385C711FD30429D126C0B /* Pods_alcon_alconUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3DD7DFC462D68B76D47B54 /* Pods_alcon_alconUITests.framework */; };
+		2EDB480EC9EED850A08CE3C8 /* Pods_alconTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14CDDD0637866C3D665D0BB0 /* Pods_alconTests.framework */; };
 		440E156F26163665008ECB22 /* DrinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440E156E26163665008ECB22 /* DrinkTableViewCell.swift */; };
 		441F3842260BA8BC00BF0D79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F3841260BA8BC00BF0D79 /* AppDelegate.swift */; };
 		441F3844260BA8BC00BF0D79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F3843260BA8BC00BF0D79 /* SceneDelegate.swift */; };
@@ -16,7 +18,13 @@
 		441F3864260BA8C100BF0D79 /* alconUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F3863260BA8C100BF0D79 /* alconUITests.swift */; };
 		443456D7260F6DEB002EA8F2 /* UIImage-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443456D6260F6DEB002EA8F2 /* UIImage-Extension.swift */; };
 		444BF6A826183B9A00ADBCAA /* DrinkInfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444BF6A726183B9900ADBCAA /* DrinkInfoLabel.swift */; };
+		4454CF30262C78F700A67277 /* Notification-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4454CF2F262C78F700A67277 /* Notification-Extension.swift */; };
+		44553DB1262344FA007073E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44553DB0262344FA007073E1 /* GoogleService-Info.plist */; };
+		44553DE226235853007073E1 /* DrinkRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44553DE126235853007073E1 /* DrinkRecordViewModel.swift */; };
+		44553DEB26235E31007073E1 /* Drinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44553DEA26235E31007073E1 /* Drinks.swift */; };
 		4469C891261875380078B525 /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4469C890261875380078B525 /* UIView-Extension.swift */; };
+		44853C40262B6D620029D215 /* DrinkTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44853C3F262B6D620029D215 /* DrinkTableViewModel.swift */; };
+		4488FB742626193900C9E60E /* GoalChangeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488FB732626193900C9E60E /* GoalChangeViewModel.swift */; };
 		44A708A32618951E00B06A07 /* DrinkRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A708A22618951E00B06A07 /* DrinkRecordViewController.swift */; };
 		44A708A92619AB6F00B06A07 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 44A708A82619AB6F00B06A07 /* RxSwift */; };
 		44A708AB2619AB6F00B06A07 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 44A708AA2619AB6F00B06A07 /* RxCocoa */; };
@@ -33,6 +41,8 @@
 		44D3A38B260DA81100F14E38 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D3A38A260DA81100F14E38 /* UIColor-Extension.swift */; };
 		44D615F52619C0A700524AD2 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D615F42619C0A700524AD2 /* CustomTextView.swift */; };
 		44D615FA2619CBED00524AD2 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D615F92619CBED00524AD2 /* CustomButton.swift */; };
+		44ECC14E26346AA100B8852B /* ActivityText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ECC14D26346AA100B8852B /* ActivityText.swift */; };
+		D2D1EE5BC04B7661EF07E4D1 /* Pods_alcon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59C9F1B752DBE344BBB5A2C /* Pods_alcon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +63,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DD7B6A024588E02CA504E23 /* Pods-alcon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alcon.debug.xcconfig"; path = "Target Support Files/Pods-alcon/Pods-alcon.debug.xcconfig"; sourceTree = "<group>"; };
+		14CDDD0637866C3D665D0BB0 /* Pods_alconTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alconTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D891A3105E289C2C55CAD06 /* Pods-alconTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alconTests.release.xcconfig"; path = "Target Support Files/Pods-alconTests/Pods-alconTests.release.xcconfig"; sourceTree = "<group>"; };
+		3E4944EECEE8BC20CB487B43 /* Pods-alcon-alconUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alcon-alconUITests.release.xcconfig"; path = "Target Support Files/Pods-alcon-alconUITests/Pods-alcon-alconUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3F3F151EAEAE66D22FC01FF1 /* Pods-alconTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alconTests.debug.xcconfig"; path = "Target Support Files/Pods-alconTests/Pods-alconTests.debug.xcconfig"; sourceTree = "<group>"; };
 		440E156E26163665008ECB22 /* DrinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTableViewCell.swift; sourceTree = "<group>"; };
 		441F383E260BA8BC00BF0D79 /* alcon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alcon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		441F3841260BA8BC00BF0D79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +83,13 @@
 		441F3865260BA8C100BF0D79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		443456D6260F6DEB002EA8F2 /* UIImage-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage-Extension.swift"; sourceTree = "<group>"; };
 		444BF6A726183B9900ADBCAA /* DrinkInfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkInfoLabel.swift; sourceTree = "<group>"; };
+		4454CF2F262C78F700A67277 /* Notification-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification-Extension.swift"; sourceTree = "<group>"; };
+		44553DB0262344FA007073E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		44553DE126235853007073E1 /* DrinkRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkRecordViewModel.swift; sourceTree = "<group>"; };
+		44553DEA26235E31007073E1 /* Drinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drinks.swift; sourceTree = "<group>"; };
 		4469C890261875380078B525 /* UIView-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-Extension.swift"; sourceTree = "<group>"; };
+		44853C3F262B6D620029D215 /* DrinkTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTableViewModel.swift; sourceTree = "<group>"; };
+		4488FB732626193900C9E60E /* GoalChangeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalChangeViewModel.swift; sourceTree = "<group>"; };
 		44A708A22618951E00B06A07 /* DrinkRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkRecordViewController.swift; sourceTree = "<group>"; };
 		44A708B72619B81800B06A07 /* GoalChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalChangeViewController.swift; sourceTree = "<group>"; };
 		44ADA209260CF51100847822 /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
@@ -81,6 +102,11 @@
 		44D3A38A260DA81100F14E38 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		44D615F42619C0A700524AD2 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		44D615F92619CBED00524AD2 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		44ECC14D26346AA100B8852B /* ActivityText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityText.swift; sourceTree = "<group>"; };
+		4B5C554C85EDF7DBC787A98B /* Pods-alcon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alcon.release.xcconfig"; path = "Target Support Files/Pods-alcon/Pods-alcon.release.xcconfig"; sourceTree = "<group>"; };
+		72C85C337AA95578C1DA76DF /* Pods-alcon-alconUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alcon-alconUITests.debug.xcconfig"; path = "Target Support Files/Pods-alcon-alconUITests/Pods-alcon-alconUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A59C9F1B752DBE344BBB5A2C /* Pods_alcon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alcon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD3DD7DFC462D68B76D47B54 /* Pods_alcon_alconUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alcon_alconUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +118,7 @@
 				44A708A92619AB6F00B06A07 /* RxSwift in Frameworks */,
 				44A708AD2619AB6F00B06A07 /* RxRelay in Frameworks */,
 				44B9B422260F7A6800DB3FE6 /* FSCalendar in Frameworks */,
+				D2D1EE5BC04B7661EF07E4D1 /* Pods_alcon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EDB480EC9EED850A08CE3C8 /* Pods_alconTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,12 +134,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C1385C711FD30429D126C0B /* Pods_alcon_alconUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2001D401E789BE062FC832B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0DD7B6A024588E02CA504E23 /* Pods-alcon.debug.xcconfig */,
+				4B5C554C85EDF7DBC787A98B /* Pods-alcon.release.xcconfig */,
+				72C85C337AA95578C1DA76DF /* Pods-alcon-alconUITests.debug.xcconfig */,
+				3E4944EECEE8BC20CB487B43 /* Pods-alcon-alconUITests.release.xcconfig */,
+				3F3F151EAEAE66D22FC01FF1 /* Pods-alconTests.debug.xcconfig */,
+				1D891A3105E289C2C55CAD06 /* Pods-alconTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		30AB77D52D4AFFBFF8DB86E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A59C9F1B752DBE344BBB5A2C /* Pods_alcon.framework */,
+				CD3DD7DFC462D68B76D47B54 /* Pods_alcon_alconUITests.framework */,
+				14CDDD0637866C3D665D0BB0 /* Pods_alconTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		441F3835260BA8BC00BF0D79 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +171,8 @@
 				441F3857260BA8C100BF0D79 /* alconTests */,
 				441F3862260BA8C100BF0D79 /* alconUITests */,
 				441F383F260BA8BC00BF0D79 /* Products */,
+				2001D401E789BE062FC832B5 /* Pods */,
+				30AB77D52D4AFFBFF8DB86E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,11 +192,14 @@
 				441F3841260BA8BC00BF0D79 /* AppDelegate.swift */,
 				441F3843260BA8BC00BF0D79 /* SceneDelegate.swift */,
 				44D3A389260DA79500F14E38 /* Extension */,
+				44553DE02623581B007073E1 /* Models */,
+				44553DDF26235808007073E1 /* ViewModels */,
 				44ADA207260CF36A00847822 /* Views */,
 				442C46D9260D8AD600A2A8EF /* ViewControllers */,
 				441F384A260BA8C100BF0D79 /* Assets.xcassets */,
 				441F384C260BA8C100BF0D79 /* LaunchScreen.storyboard */,
 				441F384F260BA8C100BF0D79 /* Info.plist */,
+				44553DB0262344FA007073E1 /* GoogleService-Info.plist */,
 			);
 			path = alcon;
 			sourceTree = "<group>";
@@ -177,6 +234,24 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		44553DDF26235808007073E1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				44553DE126235853007073E1 /* DrinkRecordViewModel.swift */,
+				4488FB732626193900C9E60E /* GoalChangeViewModel.swift */,
+				44853C3F262B6D620029D215 /* DrinkTableViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		44553DE02623581B007073E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				44553DEA26235E31007073E1 /* Drinks.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		44ADA207260CF36A00847822 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +279,7 @@
 				444BF6A726183B9900ADBCAA /* DrinkInfoLabel.swift */,
 				44D615F42619C0A700524AD2 /* CustomTextView.swift */,
 				44D615F92619CBED00524AD2 /* CustomButton.swift */,
+				44ECC14D26346AA100B8852B /* ActivityText.swift */,
 			);
 			path = UICustom;
 			sourceTree = "<group>";
@@ -214,6 +290,7 @@
 				44D3A38A260DA81100F14E38 /* UIColor-Extension.swift */,
 				443456D6260F6DEB002EA8F2 /* UIImage-Extension.swift */,
 				4469C890261875380078B525 /* UIView-Extension.swift */,
+				4454CF2F262C78F700A67277 /* Notification-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -225,9 +302,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 441F3868260BA8C100BF0D79 /* Build configuration list for PBXNativeTarget "alcon" */;
 			buildPhases = (
+				0063FF8B23A6193B24ED4E2E /* [CP] Check Pods Manifest.lock */,
 				441F383A260BA8BC00BF0D79 /* Sources */,
 				441F383B260BA8BC00BF0D79 /* Frameworks */,
 				441F383C260BA8BC00BF0D79 /* Resources */,
+				D40CA24F6CEB282A5E47A3E7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,6 +327,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 441F386B260BA8C100BF0D79 /* Build configuration list for PBXNativeTarget "alconTests" */;
 			buildPhases = (
+				C436B877CFED6B593F719912 /* [CP] Check Pods Manifest.lock */,
 				441F3850260BA8C100BF0D79 /* Sources */,
 				441F3851260BA8C100BF0D79 /* Frameworks */,
 				441F3852260BA8C100BF0D79 /* Resources */,
@@ -266,9 +346,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 441F386E260BA8C100BF0D79 /* Build configuration list for PBXNativeTarget "alconUITests" */;
 			buildPhases = (
+				AB638116701232F4F03C031C /* [CP] Check Pods Manifest.lock */,
 				441F385B260BA8C100BF0D79 /* Sources */,
 				441F385C260BA8C100BF0D79 /* Frameworks */,
 				441F385D260BA8C100BF0D79 /* Resources */,
+				7C1B230B81823B32AEA52D8E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -333,6 +415,7 @@
 			files = (
 				441F384E260BA8C100BF0D79 /* LaunchScreen.storyboard in Resources */,
 				441F384B260BA8C100BF0D79 /* Assets.xcassets in Resources */,
+				44553DB1262344FA007073E1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +435,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0063FF8B23A6193B24ED4E2E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-alcon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C1B230B81823B32AEA52D8E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-alcon-alconUITests/Pods-alcon-alconUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-alcon-alconUITests/Pods-alcon-alconUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-alcon-alconUITests/Pods-alcon-alconUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB638116701232F4F03C031C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-alcon-alconUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C436B877CFED6B593F719912 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-alconTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D40CA24F6CEB282A5E47A3E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-alcon/Pods-alcon-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-alcon/Pods-alcon-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-alcon/Pods-alcon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		441F383A260BA8BC00BF0D79 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -360,21 +546,27 @@
 				44ADA20F260CF53400847822 /* CalendarView.swift in Sources */,
 				44A708B82619B81800B06A07 /* GoalChangeViewController.swift in Sources */,
 				44D615FA2619CBED00524AD2 /* CustomButton.swift in Sources */,
+				4488FB742626193900C9E60E /* GoalChangeViewModel.swift in Sources */,
+				44853C40262B6D620029D215 /* DrinkTableViewModel.swift in Sources */,
 				44C24F19260D6743005BB6A1 /* CalendarAndDrinkingRecordViewController.swift in Sources */,
 				44C24F23260D68B9005BB6A1 /* MainTabBarController.swift in Sources */,
 				441F3842260BA8BC00BF0D79 /* AppDelegate.swift in Sources */,
+				44553DEB26235E31007073E1 /* Drinks.swift in Sources */,
 				44ADA221260CF61000847822 /* DrinkTableView.swift in Sources */,
 				443456D7260F6DEB002EA8F2 /* UIImage-Extension.swift in Sources */,
 				44A708A32618951E00B06A07 /* DrinkRecordViewController.swift in Sources */,
+				44553DE226235853007073E1 /* DrinkRecordViewModel.swift in Sources */,
 				441F3844260BA8BC00BF0D79 /* SceneDelegate.swift in Sources */,
 				44D615F52619C0A700524AD2 /* CustomTextView.swift in Sources */,
 				44ADA20A260CF51200847822 /* GoalView.swift in Sources */,
 				444BF6A826183B9A00ADBCAA /* DrinkInfoLabel.swift in Sources */,
 				44ADA21C260CF5F000847822 /* DrinkTableItemView.swift in Sources */,
 				4469C891261875380078B525 /* UIView-Extension.swift in Sources */,
+				4454CF30262C78F700A67277 /* Notification-Extension.swift in Sources */,
 				44C24F1E260D676B005BB6A1 /* SettingsViewController.swift in Sources */,
 				440E156F26163665008ECB22 /* DrinkTableViewCell.swift in Sources */,
 				44D3A38B260DA81100F14E38 /* UIColor-Extension.swift in Sources */,
+				44ECC14E26346AA100B8852B /* ActivityText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +731,7 @@
 		};
 		441F3869260BA8C100BF0D79 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DD7B6A024588E02CA504E23 /* Pods-alcon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -558,6 +751,7 @@
 		};
 		441F386A260BA8C100BF0D79 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B5C554C85EDF7DBC787A98B /* Pods-alcon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -577,6 +771,7 @@
 		};
 		441F386C260BA8C100BF0D79 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F3F151EAEAE66D22FC01FF1 /* Pods-alconTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -599,6 +794,7 @@
 		};
 		441F386D260BA8C100BF0D79 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D891A3105E289C2C55CAD06 /* Pods-alconTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -621,6 +817,7 @@
 		};
 		441F386F260BA8C100BF0D79 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72C85C337AA95578C1DA76DF /* Pods-alcon-alconUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -641,6 +838,7 @@
 		};
 		441F3870260BA8C100BF0D79 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E4944EECEE8BC20CB487B43 /* Pods-alcon-alconUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

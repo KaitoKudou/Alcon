@@ -10,10 +10,11 @@ import UIKit
 class DrinkRecordViewController: UIViewController {
     
     var drinkTableView: UITableView = UITableView(frame: .zero, style: .plain)
-    var drinkNameArray: [String] = ["ビール", "ビール(中)", "ビール", "チューハイ", "ハイボール", "ハイボール", "ワイン", "日本酒(1合)", "日本酒(おちょこ)", "焼酎", "ウイスキー"]
-    var capacityArray: [Int] = [350, 400, 500, 350, 350, 500, 120, 180, 30, 100, 30]
-    var pureAlcoholArray: [Int] = [14, 16, 20, 14, 20, 28, 12, 22, 4, 20, 10]
     let drinkItemView = DrinkItemView()
+    let drinkRecordViewModel = DrinkRecordViewModel()
+    var drinks = [Drinks]() // お酒一覧
+    private let userDefaults = UserDefaults()
+    private let dateKey: String = "date"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,11 @@ class DrinkRecordViewController: UIViewController {
         view.addSubview(drinkItemView)
         view.addSubview(drinkTableView)
         setLayoutTableView()
+        
+        self.drinkRecordViewModel.fetchDrinkLists { (drinks) in
+            self.drinks = drinks
+            self.drinkTableView.reloadData()
+        }
     }
     
     private func setLayoutTableView() {
@@ -36,19 +42,24 @@ class DrinkRecordViewController: UIViewController {
 
 extension DrinkRecordViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return drinkNameArray.count
+        return drinks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! DrinkTableViewCell
         cell.backgroundColor = UIColor(hex: "E0E0E0")
-        cell.setCell(drinkName: drinkNameArray[indexPath.row], capacity: capacityArray[indexPath.row
-        ], pureAlcohol: pureAlcoholArray[indexPath.row])
+        cell.setCell(drinkName: drinks[indexPath.row].type ?? "", capacity: drinks[indexPath.row].capacity ?? 0, pureAlcohol: drinks[indexPath.row].pureAlcohol ?? 0)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let drinkName = drinks[indexPath.row].type, let capacity = drinks[indexPath.row].capacity, let pureAlcohol = drinks[indexPath.row].pureAlcohol else { return }
+        drinkRecordViewModel.registerDailyDrink(date: userDefaults.string(forKey: dateKey) ?? "", drinkName: drinkName, capacity: capacity, pureAlcohol: pureAlcohol)
+        navigationController?.popViewController(animated: true)
     }
     
 }

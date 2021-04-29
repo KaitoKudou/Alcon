@@ -16,6 +16,7 @@ class GoalChangeViewController: UIViewController {
     var goalStorageButton: UIButton!
     private let disposeBag = DisposeBag()
     private let maxLength: Int = 30
+    private let goalChangeViewModel = GoalChangeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +78,7 @@ class GoalChangeViewController: UIViewController {
             .asDriver()
             .drive { [weak self] _ in
                 guard let self = self else { return }
+                self.goalChangeViewModel.changeGoal(goaltext: self.goalTextView.text)
                 self.navigationController?.popViewController(animated: true)
             }
             .disposed(by: disposeBag)
