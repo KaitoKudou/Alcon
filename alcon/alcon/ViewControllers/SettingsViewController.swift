@@ -5,6 +5,7 @@
 //  Created by 工藤海斗 on 2021/03/26.
 //
 
+import SafariServices
 import UIKit
 
 class SettingsViewController: UIViewController {
@@ -26,6 +27,28 @@ class SettingsViewController: UIViewController {
         settingTableView.backgroundColor = .white
         view.addSubview(settingTableView)
         settingTableView.anchor(top: view.topAnchor, bottom: view.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor)
+    }
+    
+    func toSafariView(index: Int) {
+        switch index {
+        case 0: // お問い合わせ
+            let url = "https://docs.google.com/forms/d/e/1FAIpQLScLInUYwPb8NH59JYO3Mi6-6cRLhtF9IyJVaPUUBxkLMkv3bg/viewform"
+            let safariVC = SFSafariViewController(url: NSURL(string: url)! as URL)
+            safariVC.modalPresentationStyle = .fullScreen
+            present(safariVC, animated: true, completion: nil)
+        case 1: // 利用規約
+            let url = "https://sites.google.com/view/alcon-app/terms-of-use?authuser=0"
+            let safariVC = SFSafariViewController(url: NSURL(string: url)! as URL)
+            safariVC.modalPresentationStyle = .fullScreen
+            present(safariVC, animated: true, completion: nil)
+        case 2: // プライバシーポリシー
+            let url = "https://sites.google.com/view/alcon-app/privacy-policy?authuser=0"
+            let safariVC = SFSafariViewController(url: NSURL(string: url)! as URL)
+            safariVC.modalPresentationStyle = .fullScreen
+            present(safariVC, animated: true, completion: nil)
+        default:
+            return
+        }
     }
 }
 
@@ -72,6 +95,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             navigationController?.pushViewController(goalChangeViewController, animated: true)
         } else if indexPath.section == 1 {
         } else if indexPath.section == 2 {
+            toSafariView(index: indexPath.row)
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
