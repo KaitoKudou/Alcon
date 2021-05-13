@@ -14,6 +14,8 @@ class CalendarView: UIView {
     private let userDefaults = UserDefaults()
     private let dateKey: String = "date"
     private var drinkTableViewModel: DrinkTableViewModel!
+    private let dateFormatter = DateFormatter()
+    private var dates = [String]() // 日付ごとのお酒
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,23 +23,17 @@ class CalendarView: UIView {
         drinkTableViewModel = DrinkTableViewModel()
         
         // 今日の日付を取得
-        let dateFormatter = DateFormatter()
         dateFormatter.calendar = Calendar(identifier: .gregorian)
         dateFormatter.locale = Locale(identifier: "ja_JP")
         dateFormatter.dateFormat = "yyyy/M/d"
         let dateString = dateFormatter.string(from: Date())
         userDefaults.set(dateString, forKey: dateKey)
         
-//        let current = Calendar.current
-//        let year = current.component(.year, from: Date()) //年
-//        let month = current.component(.month, from: Date()) //月
-//        let day = current.component(.day, from: Date()) //日
-//        UserDefaults.standard.register(defaults: ["year" : year, "month": month, "day": day])
-//
-//        let calendar = Calendar.current
-//        let selectDate = calendar.date(from: DateComponents(year: UserDefaults.standard.integer(forKey: "year"), month: UserDefaults.standard.integer(forKey: "month"), day: UserDefaults.standard.integer(forKey: "day")))
-//        self.calendar.select(selectDate)
-        
+        drinkTableViewModel.fetchOverallDrinkList { [weak self] dates in
+            guard self == self else { return }
+            self?.dates = dates
+            self?.calendar.reloadData()
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -62,6 +58,12 @@ class CalendarView: UIView {
         
         calendar.anchor(top: topAnchor, bottom: bottomAnchor, left: leftAnchor, right: rightAnchor)
     }
+    
+    @objc func reloadCalendar(notification: NSNotification?) {
+        let date = notification?.userInfo!["date"]
+        dates.removeAll(where: { $0 == date as? String })
+        calendar.reloadData()
+    }
 }
 
 extension CalendarView: FSCalendarDelegate, FSCalendarDataSource {
@@ -72,12 +74,26 @@ extension CalendarView: FSCalendarDelegate, FSCalendarDataSource {
         let day = tmpDate.component(.day, from: date)
 
         userDefaults.set("\(year)/\(month)/\(day)", forKey: dateKey)
-//        UserDefaults.standard.set(year, forKey: "year")
-//        UserDefaults.standard.set(month, forKey: "month")
-//        UserDefaults.standard.set(day, forKey: "day")
         drinkTableViewModel.fetchDailyDrinkList(date: "\(year)/\(month)/\(day)", completion: { [weak self] drinks in
             guard self != nil else { return }
             NotificationCenter.default.post(name: .applyDrink, object: nil, userInfo: ["drinks": drinks])
         })
+    }
+    
+    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+        dateFormatter.dateFormat = "yyyy/M/d"
+        dateFormatter.calendar = Calendar(identifier: .gregorian)
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.locale = Locale.current
+        let calendarDay = dateFormatter.string(from: date)
+        
+        // 削除されたをTableView画面から受け取る
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadCalendar(notification:)), name: .reloadCalendar, object: nil)
+        
+        if (dates.contains(calendarDay)) {
+            return 1
+        } else {
+            return 0
+        }
     }
 }
