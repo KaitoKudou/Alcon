@@ -15,4 +15,14 @@ extension UIColor {
         let b = CGFloat(v / Int(powf(256, 0)) % 256) / 255
         self.init(red: r, green: g, blue: b, alpha: min(max(alpha, 0), 1))
     }
+    
+    convenience init(light: UIColor, dark: UIColor) {
+        self.init {
+            if $0.userInterfaceStyle == .dark {
+                return dark
+            } else {
+                return light
+            }
+        }
+    }
 }
