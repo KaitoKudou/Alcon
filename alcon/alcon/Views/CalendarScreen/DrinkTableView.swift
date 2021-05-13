@@ -33,9 +33,10 @@ class DrinkTableView: UITableView {
     }
     
     private func setLayoutTableView() {
-        backgroundColor = UIColor(hex: "E0E0E0")
+        backgroundColor = UIColor(light: UIColor(hex: "E0E0E0"), dark: UIColor(hex: "262626"))
         anchor(top: topAnchor, bottom: bottomAnchor, left: leftAnchor, right: rightAnchor)
         register(DrinkTableViewCell.self, forCellReuseIdentifier: "cell")
+        separatorColor = UIColor(light: .black, dark: UIColor(hex: "d1d1d1"))
         delegate = self
         dataSource = self
     }
@@ -54,7 +55,7 @@ extension DrinkTableView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! DrinkTableViewCell
-        cell.backgroundColor = UIColor(hex: "E0E0E0")
+        cell.backgroundColor = UIColor(light: UIColor(hex: "E0E0E0"), dark: UIColor(hex: "262626"))
         cell.setCell(drinkName: drinks[indexPath.row].type ?? "", capacity: drinks[indexPath.row
         ].capacity ?? 0, pureAlcohol: drinks[indexPath.row].pureAlcohol ?? 0)
         return cell
