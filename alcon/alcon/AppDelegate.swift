@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(hex: "73AADD"), NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 25)]
         //タブバーコントローラー
         UITabBar.appearance().tintColor = UIColor(hex: "73AADD")
-        UITabBar.appearance().barTintColor = .white
+        UITabBar.appearance().barTintColor = UIColor(light: .white, dark: UIColor(hex: "242629"))
         UITabBar.appearance().isTranslucent = false
         
         FirebaseApp.configure()
