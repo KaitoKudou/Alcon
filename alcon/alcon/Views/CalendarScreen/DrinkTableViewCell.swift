@@ -9,9 +9,9 @@ import UIKit
 
 class DrinkTableViewCell: UITableViewCell {
     
-    private let drinkNameLabel = DrinkInfoLabel(fontSize: 18, alignment: .left)
-    private let capacityLabel = DrinkInfoLabel(fontSize: 18, alignment: .center)
-    private let amountPureAlcoholLabel = DrinkInfoLabel(fontSize: 18, alignment: .center)
+    private let drinkNameLabel = DrinkInfoLabel(fontSize: 18, color: UIColor(light: .black, dark: .white), alignment: .left)
+    private let capacityLabel = DrinkInfoLabel(fontSize: 18, color: UIColor(light: .black, dark: .white), alignment: .center)
+    private let amountPureAlcoholLabel = DrinkInfoLabel(fontSize: 18, color: UIColor(light: .black, dark: .white), alignment: .center)
     
     override func awakeFromNib() {
         super.awakeFromNib()
