@@ -78,5 +78,8 @@ extension DrinkTableView: UITableViewDelegate, UITableViewDataSource {
             drinks.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
+        
+        // 削除したことをカレンダー画面に伝える
+        NotificationCenter.default.post(name: .reloadCalendar, object: nil, userInfo: ["date": date])
     }
 }
