@@ -29,6 +29,25 @@ class DrinkTableViewModel {
         }
     }
     
+    func fetchOverallDrinkList(completion: @escaping ([String]) -> Void) {
+        let firestore = Firestore.firestore()
+        firestore.collection("users").document(UIDevice.current.identifierForVendor!.uuidString).collection("drink").getDocuments { [weak self] (querySnapshots, err) in
+            guard self != nil else { return }
+            
+            if let err = err {
+                print("全体飲酒記録読み込み失敗: \(err)")
+                return
+            }
+            
+            let dates = querySnapshots?.documents.map({ (snapshot) -> String in
+                let dic = snapshot.data()
+                let date: String = Drinks(dic: dic).date ?? ""
+                return date
+            })
+            completion(dates ?? [String]())
+        }
+    }
+    
     func deleteDailyDrinkList(date: String, drinks: Drinks) {
         let firestore = Firestore.firestore()
         firestore.collection("users").document(UIDevice.current.identifierForVendor!.uuidString).collection("drink").whereField("date", isEqualTo: date).whereField("type", isEqualTo: drinks.type ?? "").whereField("capacity", isEqualTo: drinks.capacity ?? 0).whereField("pureAlcohol", isEqualTo: drinks.pureAlcohol ?? 0).getDocuments { [weak self] (querySnapshots, err) in
