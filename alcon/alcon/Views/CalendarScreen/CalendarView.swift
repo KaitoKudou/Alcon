@@ -15,7 +15,7 @@ class CalendarView: UIView {
     private let dateKey: String = "date"
     private var drinkTableViewModel: DrinkTableViewModel!
     private let dateFormatter = DateFormatter()
-    private var dates = [String]() // 日付ごとのお酒
+    private var drinksOverall = [Drinks]() // 全体の記録
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,10 +29,11 @@ class CalendarView: UIView {
         let dateString = dateFormatter.string(from: Date())
         userDefaults.set(dateString, forKey: dateKey)
         
-        drinkTableViewModel.fetchOverallDrinkList { [weak self] dates in
+        drinkTableViewModel.fetchOverallDrinkList { [weak self] drinks in
             guard self == self else { return }
-            self?.dates = dates
+            self?.drinksOverall = drinks
             self?.calendar.reloadData()
+            print("全件: ", self?.drinksOverall)
         }
     }
     
@@ -60,8 +61,8 @@ class CalendarView: UIView {
     }
     
     @objc func reloadCalendar(notification: NSNotification?) {
-        let date = notification?.userInfo!["date"]
-        dates.removeAll(where: { $0 == date as? String })
+        let deletedDrinks = notification?.userInfo!["drink"]
+        drinksOverall = deletedDrinks as? [Drinks] ?? [Drinks]()
         calendar.reloadData()
     }
 }
@@ -75,7 +76,7 @@ extension CalendarView: FSCalendarDelegate, FSCalendarDataSource {
 
         userDefaults.set("\(year)/\(month)/\(day)", forKey: dateKey)
         drinkTableViewModel.fetchDailyDrinkList(date: "\(year)/\(month)/\(day)", completion: { [weak self] drinks in
-            guard self != nil else { return }
+            guard  self != nil else { return }
             NotificationCenter.default.post(name: .applyDrink, object: nil, userInfo: ["drinks": drinks])
         })
     }
@@ -89,8 +90,7 @@ extension CalendarView: FSCalendarDelegate, FSCalendarDataSource {
         
         // 削除されたをTableView画面から受け取る
         NotificationCenter.default.addObserver(self, selector: #selector(reloadCalendar(notification:)), name: .reloadCalendar, object: nil)
-        
-        if (dates.contains(calendarDay)) {
+        if (drinksOverall.contains(where: { $0.date == calendarDay })) {
             return 1
         } else {
             return 0

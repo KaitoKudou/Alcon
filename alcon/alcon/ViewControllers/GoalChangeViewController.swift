@@ -20,10 +20,11 @@ class GoalChangeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(light: .white, dark: .black)
         navigationItem.title = "目標変更"
-        characterCountLabel = DrinkInfoLabel(text: "0/\(maxLength)", fontSize: 20, alignment: .left)
-        goalTextView = CustomTextView(backgroundColor: UIColor(hex: "F2F2F7"), font: UIFont.systemFont(ofSize: 20), borderColor: UIColor(hex: "D0D0D1").cgColor, borderWidth: 1.0, cornerRadius: 10.0)
+        characterCountLabel = DrinkInfoLabel(text: "0/\(maxLength)", fontSize: 20, color: UIColor(light: .black, dark: .white), alignment: .left)
+        characterCountLabel.textColor = .systemBlue
+        goalTextView = CustomTextView(backgroundColor: UIColor(light: UIColor(hex: "E0E0E0"), dark: .darkGray), font: UIFont.systemFont(ofSize: 20), cornerRadius: 10.0)
         goalStorageButton = CustomButton(title: "保存", titleColor: UIColor(hex: "73AADD"), titileFont: UIFont.boldSystemFont(ofSize: 20), backgroundColor: UIColor(hex: "C3E2FF"), cornerRadius: 10)
         
         view.addSubview(characterCountLabel)
@@ -55,8 +56,8 @@ class GoalChangeViewController: UIViewController {
                     self.goalTextView.textColor = .red
                     self.characterCountLabel.textColor = .red
                 } else {
-                    self.goalTextView.textColor = .black
-                    self.characterCountLabel.textColor = .black
+                    self.goalTextView.textColor = UIColor(light: .black, dark: .white)
+                    self.characterCountLabel.textColor = UIColor(light: .black, dark: .white)
                 }
                 
                 let inputTextLength = self.goalTextView.text.count

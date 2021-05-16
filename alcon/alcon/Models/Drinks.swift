@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Drinks {
+struct Drinks: Equatable {
     let type: String?
     let capacity: Int?
     let pureAlcohol: Int?
