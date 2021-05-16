@@ -79,7 +79,6 @@ extension DrinkTableView: UITableViewDelegate, UITableViewDataSource {
             drinkTableViewModel.deleteDailyDrinkList(date: date, drinks: drinks[indexPath.row], completion: {
                 [weak self] (deletedDrinksResult) in
                 guard self == self else { return }
-                print("TableViewCellをスワイプ直後のdrinks: ", deletedDrinksResult)
                 // 削除したことをカレンダー画面に伝える
                 NotificationCenter.default.post(name: .reloadCalendar, object: nil, userInfo: ["date": date, "drink": deletedDrinksResult])
             })

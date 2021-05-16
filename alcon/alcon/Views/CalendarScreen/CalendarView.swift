@@ -33,7 +33,6 @@ class CalendarView: UIView {
             guard self == self else { return }
             self?.drinksOverall = drinks
             self?.calendar.reloadData()
-            print("全件: ", self?.drinksOverall)
         }
     }
     
