@@ -12,7 +12,8 @@ class DrinkTableView: UITableView {
     private var drinkTableViewModel: DrinkTableViewModel!
     private let userDefaults = UserDefaults()
     private let dateKey: String = "date"
-    var drinks = [Drinks]() // 日付ごとのお酒
+    private var drinks = [Drinks]() // 日付ごとのお酒
+    private var drinksOverall = [Drinks]() // 全体の記録
     
     init(style: UITableView.Style) {
         super.init(frame: .zero, style: .plain)
@@ -75,12 +76,15 @@ extension DrinkTableView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         let date = userDefaults.string(forKey: dateKey) ?? ""
         if editingStyle == UITableViewCell.EditingStyle.delete {
-            drinkTableViewModel.deleteDailyDrinkList(date: date, drinks: drinks[indexPath.row])
+            drinkTableViewModel.deleteDailyDrinkList(date: date, drinks: drinks[indexPath.row], completion: {
+                [weak self] (deletedDrinksResult) in
+                guard self == self else { return }
+                print("TableViewCellをスワイプ直後のdrinks: ", deletedDrinksResult)
+                // 削除したことをカレンダー画面に伝える
+                NotificationCenter.default.post(name: .reloadCalendar, object: nil, userInfo: ["date": date, "drink": deletedDrinksResult])
+            })
             drinks.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
-        
-        // 削除したことをカレンダー画面に伝える
-        NotificationCenter.default.post(name: .reloadCalendar, object: nil, userInfo: ["date": date])
     }
 }
