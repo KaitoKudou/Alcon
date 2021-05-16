@@ -5,6 +5,7 @@
 //  Created by 工藤海斗 on 2021/03/26.
 //
 
+import PKHUD
 import UIKit
 
 class DrinkTableView: UITableView {
@@ -76,11 +77,13 @@ extension DrinkTableView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         let date = userDefaults.string(forKey: dateKey) ?? ""
         if editingStyle == UITableViewCell.EditingStyle.delete {
+            HUD.show(.progress)
             drinkTableViewModel.deleteDailyDrinkList(date: date, drinks: drinks[indexPath.row], completion: {
                 [weak self] (deletedDrinksResult) in
                 guard self == self else { return }
                 // 削除したことをカレンダー画面に伝える
                 NotificationCenter.default.post(name: .reloadCalendar, object: nil, userInfo: ["date": date, "drink": deletedDrinksResult])
+                HUD.hide()
             })
             drinks.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
