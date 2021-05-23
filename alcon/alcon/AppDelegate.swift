@@ -27,6 +27,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
+        Auth.auth().signInAnonymously { [weak self] (authDataResult, error) in
+            guard self != nil else { return }
+            if let error = error {
+                print("匿名認証に失敗：", error)
+                return
+            }
+            guard let user = authDataResult?.user else { return }
+            print("匿名認証成功　user's uid: ", user.uid)
+        }
+        
         return true
     }
 
