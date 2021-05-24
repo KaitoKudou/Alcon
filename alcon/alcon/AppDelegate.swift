@@ -22,10 +22,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(hex: "73AADD"), NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 25)]
         //タブバーコントローラー
         UITabBar.appearance().tintColor = UIColor(hex: "73AADD")
-        UITabBar.appearance().barTintColor = .white
+        UITabBar.appearance().barTintColor = UIColor(light: .white, dark: UIColor(hex: "242629"))
         UITabBar.appearance().isTranslucent = false
         
         FirebaseApp.configure()
+        
+        Auth.auth().signInAnonymously { [weak self] (authDataResult, error) in
+            guard self != nil else { return }
+            if let error = error {
+                print("匿名認証に失敗：", error)
+                return
+            }
+            guard let user = authDataResult?.user else { return }
+            print("匿名認証成功　user's uid: ", user.uid)
+        }
         
         return true
     }

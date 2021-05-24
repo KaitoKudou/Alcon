@@ -23,6 +23,7 @@
 		44553DE226235853007073E1 /* DrinkRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44553DE126235853007073E1 /* DrinkRecordViewModel.swift */; };
 		44553DEB26235E31007073E1 /* Drinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44553DEA26235E31007073E1 /* Drinks.swift */; };
 		4469C891261875380078B525 /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4469C890261875380078B525 /* UIView-Extension.swift */; };
+		447EB2042651905100B5AD7F /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 447EB2032651905100B5AD7F /* PKHUD */; };
 		44853C40262B6D620029D215 /* DrinkTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44853C3F262B6D620029D215 /* DrinkTableViewModel.swift */; };
 		4488FB742626193900C9E60E /* GoalChangeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488FB732626193900C9E60E /* GoalChangeViewModel.swift */; };
 		44A708A32618951E00B06A07 /* DrinkRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A708A22618951E00B06A07 /* DrinkRecordViewController.swift */; };
@@ -117,6 +118,7 @@
 				44A708AB2619AB6F00B06A07 /* RxCocoa in Frameworks */,
 				44A708A92619AB6F00B06A07 /* RxSwift in Frameworks */,
 				44A708AD2619AB6F00B06A07 /* RxRelay in Frameworks */,
+				447EB2042651905100B5AD7F /* PKHUD in Frameworks */,
 				44B9B422260F7A6800DB3FE6 /* FSCalendar in Frameworks */,
 				D2D1EE5BC04B7661EF07E4D1 /* Pods_alcon.framework in Frameworks */,
 			);
@@ -318,6 +320,7 @@
 				44A708A82619AB6F00B06A07 /* RxSwift */,
 				44A708AA2619AB6F00B06A07 /* RxCocoa */,
 				44A708AC2619AB6F00B06A07 /* RxRelay */,
+				447EB2032651905100B5AD7F /* PKHUD */,
 			);
 			productName = alcon;
 			productReference = 441F383E260BA8BC00BF0D79 /* alcon.app */;
@@ -396,6 +399,7 @@
 			packageReferences = (
 				44B9B420260F7A6800DB3FE6 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				44A708A72619AB6F00B06A07 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				447EB2022651905100B5AD7F /* XCRemoteSwiftPackageReference "PKHUD" */,
 			);
 			productRefGroup = 441F383F260BA8BC00BF0D79 /* Products */;
 			projectDirPath = "";
@@ -735,6 +739,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DX3FKMWYLL;
 				INFOPLIST_FILE = alcon/Info.plist;
@@ -744,6 +749,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.icloud.kaitokudou2468110921.alcon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -755,6 +761,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DX3FKMWYLL;
 				INFOPLIST_FILE = alcon/Info.plist;
@@ -764,6 +771,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.icloud.kaitokudou2468110921.alcon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -899,6 +907,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		447EB2022651905100B5AD7F /* XCRemoteSwiftPackageReference "PKHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pkluz/PKHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
 		44A708A72619AB6F00B06A07 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -918,6 +934,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		447EB2032651905100B5AD7F /* PKHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 447EB2022651905100B5AD7F /* XCRemoteSwiftPackageReference "PKHUD" */;
+			productName = PKHUD;
+		};
 		44A708A82619AB6F00B06A07 /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 44A708A72619AB6F00B06A07 /* XCRemoteSwiftPackageReference "RxSwift" */;

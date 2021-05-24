@@ -7,14 +7,16 @@
 
 import Foundation
 
-struct Drinks {
+struct Drinks: Equatable {
     let type: String?
     let capacity: Int?
     let pureAlcohol: Int?
+    let date: String?
     
     init(dic: [String: Any]) {
         self.type = dic["type"] as? String ?? ""
         self.capacity = dic["capacity"] as? Int ?? 0
         self.pureAlcohol = dic["pureAlcohol"] as? Int ?? 0
+        self.date = dic["date"] as? String ?? ""
     }
 }

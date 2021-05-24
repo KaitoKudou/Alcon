@@ -24,7 +24,7 @@ class SettingsViewController: UIViewController {
         settingTableView.delegate = self
         settingTableView.dataSource = self
         settingTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        settingTableView.backgroundColor = .white
+        settingTableView.backgroundColor = UIColor(light: .white, dark: .black)
         view.addSubview(settingTableView)
         settingTableView.anchor(top: view.topAnchor, bottom: view.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor)
     }
@@ -77,6 +77,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.backgroundColor = UIColor(light: .white, dark: UIColor(hex: "262626"))
         if indexPath.section == 0 {
             cell.accessoryType = .disclosureIndicator
             cell.textLabel?.text = sectionLabel1[indexPath.row] as? String
