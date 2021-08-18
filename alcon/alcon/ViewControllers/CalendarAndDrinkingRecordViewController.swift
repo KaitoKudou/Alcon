@@ -66,6 +66,11 @@ class CalendarAndDrinkingRecordViewController: UIViewController {
                 guard let self = self else { return }
                 let items = [ActivityText()]
                 let activeViewCotntroller = UIActivityViewController(activityItems: items, applicationActivities: nil)
+                
+                // 以下、iPadに対応
+                activeViewCotntroller.popoverPresentationController?.sourceView = self.view
+                activeViewCotntroller.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.size.width / 2.0, y: self.view.bounds.size.height / 2.0, width: 0.0, height: 0.0)
+                
                 self.present(activeViewCotntroller,animated:true,completion:nil)
             }
             .disposed(by: disposeBag)
