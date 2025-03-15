@@ -14,7 +14,6 @@ class SettingsViewController: UIViewController {
     let sectionTitle: [String] = ["目標変更", "バージョン", "その他"] // Sectionのタイトル
     // section毎のラベル
     let sectionLabel1: NSArray = ["節酒目標"]
-    let sectionLabel2: NSArray = ["1.0.0"]
     let sectionLabel3: NSArray = ["お問い合わせ", "利用規約", "プライバシーポリシー"]
     
     override func viewDidLoad() {
@@ -67,7 +66,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         if section == 0 {
             return sectionLabel1.count
         } else if section == 1 {
-            return sectionLabel2.count
+            return 1
         } else if section == 2 {
             return sectionLabel3.count
         } else {
@@ -82,7 +81,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             cell.accessoryType = .disclosureIndicator
             cell.textLabel?.text = sectionLabel1[indexPath.row] as? String
         } else if indexPath.section == 1 {
-            cell.textLabel?.text = sectionLabel2[indexPath.row] as? String
+            cell.textLabel?.text = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         } else if indexPath.section == 2 {
             cell.textLabel?.text = sectionLabel3[indexPath.row] as? String
         }
